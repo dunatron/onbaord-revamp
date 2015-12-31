@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="$ThemeDir/css/style.css">
 
 </head>
-<body>
-
+<body class="$ClassName.LowerCase">
+<!--[if lt IE 10]>
 <div class="chromeframe">
     <div class="row">
         <div class="col-lg-12">
@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-0
+<![endif]-->
 <div class="container-fluid" id="site-wrapper">
 <% include NavBar %>
     <div class="site-content-wrapper">
