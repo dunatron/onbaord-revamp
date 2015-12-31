@@ -1,0 +1,48 @@
+.actions {
+  padding: 20px 0;
+
+  a, a:visited {
+    font-family: GustanExtraBlack;
+    color: @color-actions-job-details;
+    font-size: 10px;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    transform: scaleX(1.001);
+    margin-right: 22px;
+
+    &:hover, &:focus {
+      color: lighten(@color-actions-job-details, 40%);
+      text-decoration: none;
+    }
+  }
+
+
+  .forward {
+
+    &:before {
+      content: "";
+      width: 14px;
+      height: 9px;
+      background: transparent url(../images/icons/mail-icon.png) no-repeat left center;
+      display: inline-block;
+      margin-right: 5px;
+      position: relative;
+      background-size: 14px 9px;
+    }
+  }
+
+  .print {
+
+    &:before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      background: transparent url(../images/icons/print-icon.png) no-repeat left center;
+      display: inline-block;
+      margin-right: 5px;
+      position: relative;
+      background-size: 13px;
+    }
+  }
+}

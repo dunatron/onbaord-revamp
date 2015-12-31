@@ -1,0 +1,76 @@
+.bottom {
+  font-family: GustanMedium;
+  color: @color-categories-heading-job-details;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+  padding-top: 6px;
+  margin-left: -5px;
+  padding: 10px !important;
+
+  @media @min700 {
+    //margin-left: 10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding: 6px 10px !important;
+    margin-left: 0;
+  }
+
+  .type, .location {
+    padding: 14px 0 10px 30px;
+    max-width: 140px;
+    line-height: 11px;
+
+    @media @min700 {
+    }
+  }
+
+  .type, .location, .more-info {
+    @media @min700 {
+      width: 33.33333333%;
+      display: inline-block !important;
+    }
+  }
+
+  .type {
+    background: url(../images/icons/type-icon.png) no-repeat left center;
+    background-size: 26px;
+  }
+
+  .location {
+    background: url(../images/icons/new-zealand-map-icon.png) no-repeat left center;
+    background-size: 19px 29px;
+    padding-left: 24px;
+  }
+
+  .more-info {
+    text-align: center;
+
+    @media @min525 {
+      text-align: right;
+    }
+
+    @media @min700 {
+      padding-top: 4px;
+    }
+    @media @min992 {
+      padding-top: 0;
+    }
+    a {
+      font-family: GustanExtraBlack;
+      font-weight: 900;
+      transform: scaleY(1.0211);
+      font-size: 11px;
+      border-width: 3.166667px;
+      padding: 4px 10px;
+
+      @media @min992 {
+        font-size: 13px;
+        border-width: 4.166666666666667px;
+        padding: 6px 12px;
+      }
+    }
+  }
+}

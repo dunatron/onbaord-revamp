@@ -1,0 +1,298 @@
+
+.nc-agencies {
+  border-bottom: 0 none !important;
+
+  .close-jobs-categories {
+
+    a, a:visited {
+      background: #fff;
+      font-family: GustanExtraBlack;
+      color: #ffcd34;
+      font-size: 15.73px;
+      font-weight: 900;
+      text-align: center;
+      padding: 11px 0;
+      transform: scaleY(1.009);
+
+      &:hover, &:focus {
+        color: darken(@color-primary, 20%);
+        text-decoration: none;
+      }
+
+      span.x {
+        display: inline-block;
+        font-size: 20px;
+        margin: 0 10px;
+        font-family: GustanExtraBlack;
+      }
+    }
+
+  }
+
+  .graduate-advert {
+    a, a:visited {
+      background: @color-primary;
+      font-family: GustanExtraBlack;
+      color: #000000;
+      font-size: 16.57px;
+      font-weight: 900;
+      line-height: 32px;
+      text-align: center;
+      transform: scaleY(1.002);
+      padding: 9px 0;
+
+      @media @normal {
+        font-size: 22.57px;
+      }
+
+      &:hover, &:focus {
+        background: darken(@color-primary, 20%);
+        text-decoration: none;
+      }
+
+      span {
+        background: url(../images/icons/right-arrow-icon.png) no-repeat right center;
+        background-size: 21px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .row-height {
+    //display: table;
+    //table-layout: fixed;
+    //height: 100%;
+    //width: 100%;
+  }
+
+  .category {
+    min-height: 440px;
+    //display: table-cell;
+    //float: none;
+    //height: 100%;
+
+    .wrap {
+      text-align: center;
+
+      //height: 100%;
+      //margin-top: 0;
+      //margin-bottom: 0;
+
+      .content {
+        padding: 45px 17px 40px;
+      }
+
+      .top {
+        height: 400px;
+      }
+      .bottom {
+        //display: table-row;
+        border-bottom: 1px solid #040508;
+
+        .content {
+          padding: 0 17px 40px;
+        }
+      }
+    }
+
+    h3 {
+      text-align: center;
+      width: 160px;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+
+
+      span {
+        font-family: GustanExtraBlack;
+        color: #000000;
+        font-size: 21px;
+        font-weight: 900;
+        line-height: 33px;
+        text-align: center;
+        transform: scaleY(1.002);
+        text-transform: uppercase;
+        background: @color-primary;
+        width: 160px;
+        margin: 0 auto;
+        clear: both;
+        display: block;
+
+
+        @media @min1100 {
+          width: 135px;
+          font-size: 17px;
+        }
+
+        @media @min1280 {
+          width: 160px;
+          font-size: 21px;
+        }
+      }
+      &:before, &:after {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        width: 100%;
+        position: absolute;
+      }
+      &:before {
+        background: url(../images/corner-top-yellow.png) no-repeat left top;
+        background-size: 18px;
+        left: -17px;
+        top: -14px;
+
+
+        @media @min1100 {
+          left: -2px;
+          top: -14px;
+        }
+
+        @media @min1280 {
+          left: -17px;
+          top: -14px;
+        }
+
+      }
+      &:after {
+        background: url(../images/corner-bottom-yellow.png) no-repeat right bottom;
+        background-size: 18px;
+        right: -16px;
+        bottom: -14px;
+
+
+        @media @min1100 {
+          right: -3px;
+          bottom: -14px;
+        }
+
+        @media @min1280 {
+          right: -16px;
+          bottom: -14px;
+        }
+      }
+    }
+
+    .category-content {
+      width: 88%;
+      margin: 35px auto 24px;
+      min-height: 206px;
+      height: 270px;
+      overflow: auto;
+      .intro {
+        font-family: GustanMedium;
+        color: #000000;
+        font-size: 14.02px;
+        font-weight: 500;
+        line-height: 21.25px;
+        margin-bottom: 20px;
+      }
+
+      .summary {
+        font-family: GustanLight;
+        color: #000000;
+        font-size: 14.02px;
+        font-weight: 100;
+        line-height: 21.25px;
+      }
+    }
+
+    .btn {
+      width: 171px;
+      height: 35px;
+      margin: auto;
+      font-family: GustanMedium;
+      color: #000000;
+      font-size: 14.92px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: center;
+      transform: scaleX(1.0078);
+      text-transform: uppercase;
+      padding: 10px 15px;
+    }
+  }
+
+  .category-1 {
+    background: #303031;
+
+    .category-content {
+
+      .intro {
+        color: #ffffff;
+      }
+
+      .summary {
+        color: #ffffff;
+      }
+    }
+  }
+  .category-2 {
+    background: #fffffe;
+
+  }
+  .category-3 {
+    background: @color-primary;
+
+    h3 {
+      &:before {
+        background: url(../images/corner-top-black.png) no-repeat left top;
+        background-size: 18px;
+
+
+        @media @min1100 {
+          left: -12px;
+        }
+
+        @media @min1280 {
+          //left: -3px;
+        }
+      }
+      &:after {
+        background: url(../images/corner-bottom-black.png) no-repeat right bottom;
+        background-size: 18px;
+
+
+        @media @min1100 {
+          right: -14px;
+        }
+
+        @media @min1280 {
+          //right: -2px;
+        }
+      }
+
+      span {
+        width: 286px;
+        background: #000000;
+        color: #fff;
+
+        @media @min1100 {
+          width: 235px;
+        }
+
+        @media @min1280 {
+          width: 286px;
+        }
+
+      }
+      width: 286px;
+
+      @media @min1100 {
+        width: 235px;
+      }
+
+      @media @min1280 {
+        width: 286px;
+      }
+    }
+    .btn {
+      color: #ffffff;
+    }
+  }
+  .category-4 {
+    background: #fffffe;
+
+  }
+}

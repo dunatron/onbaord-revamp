@@ -1,0 +1,41 @@
+
+.actions {
+  padding: 0 0 13px 0;
+
+  @media @min700 {
+    padding-bottom: 11px;
+  }
+
+  .actions-bar {
+    border-top: 1px solid @color-actions-job-details;
+    margin: 0 5px;
+    padding-top: 15px;
+  }
+
+  a, a:visited {
+    font-family: GustanExtraBlack;
+    color: @color-actions-job-details;
+    font-size: 11px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    transform: scaleX(1.001);
+
+    &:hover, &:focus {
+      color: lighten(@color-actions-job-details, 40%);
+      text-decoration: none;
+    }
+
+    &:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background: transparent url(../images/icons/mail-icon.png) no-repeat left center;
+      margin-right: 5px;
+      position: relative;
+      background-size: 15px;
+      display: inline-block;
+      margin-bottom: -3px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+
+body {
+  background: #252523 url(../images/background.png) no-repeat center;
+  background-size: cover;
+  .main-container {
+    padding-top: 87px;
+    margin: auto;
+    @media @min960 {
+      width: 960px;
+    }
+  }
+  .page {
+
+
+
+    @media @min750 {
+      width: 750px;
+    }
+
+    @media @min992 {
+      margin-left: 60px;
+    }
+
+    .inner-content {
+      .heading {
+        h1 {
+          font-family: GustanExtraBlack;
+          color: @color-primary;
+          font-size: 23.97px;
+          font-weight: 900;
+          line-height: 58px;
+          transform: scaleY(1.002);
+          text-transform: uppercase;
+          margin: 0;
+
+          @media @min660 {
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          @media @min992 {
+            font-size: 70px;
+            margin-bottom: 44px;
+          }
+
+          span {
+            .animation_animation();
+            .rotate(-8deg);
+            display: inline-block;
+          }
+
+          //&:hover {
+          //  span {
+          //    .rotate(-3deg);
+          //  }
+          //}
+        }
+      }
+
+      .content {
+        background: #fff;
+        padding: 15px;
+      }
+    }
+  }
+}

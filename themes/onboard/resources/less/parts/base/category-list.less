@@ -1,0 +1,55 @@
+.category {
+  .animation_animation(max-height 0.3s ease-in);
+  position: absolute;
+  right: 0;
+  padding: 0 5px;
+  z-index: 9999;
+  z-index: 99999999;
+  max-height: 20px;
+  overflow: hidden;
+  background: #fff;
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    background: transparent url(../images/icons/category-icon.png) no-repeat  right 3px;
+    background-size: 15px;
+    padding: 0px 22px 5px 10px;
+
+
+    z-index: 99999999;
+  }
+
+  &.categories {
+    ul {
+      background: transparent url(../images/icons/category-yellow-icon.png) no-repeat right 3px;
+      background-size: 15px;
+    }
+
+    &:hover {
+      background-color: #fff;
+      outline: 1px solid #E8E7E7;
+      max-height: 500px;
+      li {
+
+      }
+    }
+  }
+
+
+  li {
+    text-align: right;
+    padding: 5px 5px 0 0;
+
+    a , a:visited {
+
+      &:hover, &:focus {
+
+      }
+    }
+
+    &.first {
+      padding-top: 0;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+    height: 100%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 800px;
+}
+
+.carousel-caption{
+    background-color: rgba(42,42,42,1);
+    left: 0;
+    right: 0;
+    bottom:0;
+    padding: 20px 0;
+    z-index: 100;
+
+}
+.carousel-caption h2 {
+    display: inline;
+}
+
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+
+.btn-onboard-banner {
+    color: #2a2a2a;
+    background-color: #fff;
+    border-color: #2a2a2a;
+    margin: 0 25px;
+    padding: 10px 30px;
+}
+.btn-onboard-banner:focus,
+.btn-onboard-banner.focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+.btn-onboard-banner:hover {
+    color: #2a2a2a;
+    background-color: #b8f601;
+    border-color: #204d74;
+}
+.btn-onboard-banner:active,
+.btn-onboard-banner.active,
+.open > .dropdown-toggle.btn-onboard-banner {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.btn-onboard-banner:active:hover,
+.btn-onboard-banner.active:hover,
+.open > .dropdown-toggle.btn-onboard-banner:hover,
+.btn-onboard-banner:active:focus,
+.btn-onboard-banner.active:focus,
+.open > .dropdown-toggle.btn-onboard-banner:focus,
+.btn-onboard-banner:active.focus,
+.btn-onboard-banner.active.focus,
+.open > .dropdown-toggle.btn-onboard-banner.focus {
+    color: #fff;
+    background-color: #204d74;
+    border-color: #122b40;
+}
+.btn-onboard-banner:active,
+.btn-onboard-banner.active,
+.open > .dropdown-toggle.btn-onboard-banner {
+    background-image: none;
+}
+.btn-onboard-banner.disabled:hover,
+.btn-onboard-banner[disabled]:hover,
+fieldset[disabled] .btn-onboard-banner:hover,
+.btn-onboard-banner.disabled:focus,
+.btn-onboard-banner[disabled]:focus,
+fieldset[disabled] .btn-onboard-banner:focus,
+.btn-onboard-banner.disabled.focus,
+.btn-onboard-banner[disabled].focus,
+fieldset[disabled] .btn-onboard-banner.focus {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-onboard-banner .badge {
+    color: #337ab7;
+    background-color: #fff;
+}
