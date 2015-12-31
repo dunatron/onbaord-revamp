@@ -8,6 +8,12 @@
 jQuery(document).ready(function($){
     // Defining a function to set size for #hero
     function fullscreen(){
+
+        jQuery('#hero').css({
+            width: jQuery(window).width(),
+            height: jQuery(window).height()/1.3333
+        });
+
         jQuery('#myCarousel').css({
             width: jQuery(window).width(),
             height: jQuery(window).height()/1.3333

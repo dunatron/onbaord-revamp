@@ -1,6 +1,5 @@
 <div class="section-homepage-banner">
 
-
     <div id="hero" class="container-fluid">
         <!-- Full Page Image Background Carousel Header -->
         <header id="myCarousel" class="carousel slide">
@@ -12,7 +11,6 @@
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         --%>
-
             <!-- Wrapper for Slides -->
             <div class="carousel-inner">
                 <div class="item active">
@@ -21,6 +19,7 @@
                     <div class="carousel-caption">
                         <a class="btn btn-module-transparent" href="#" role="button">Link</a>
                         <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+
                         <h2>Caption 1</h2>
                     </div>
 
@@ -28,10 +27,12 @@
                 </div>
                 <div class="item">
                     <!-- Set the second background image using inline CSS below. -->1
-                    <div class="fill" style="background-image:url('$ThemeDir/images/banner-building-lights.jpeg');"></div>
+                    <div class="fill"
+                         style="background-image:url('$ThemeDir/images/banner-building-lights.jpeg');"></div>
                     <div class="carousel-caption">
                         <a class="btn btn-onboard-banner" href="#" role="button">Link</a>
                         <a class="btn btn-onboard-banner" href="#" role="button">Link</a>
+
                         <h2>Caption 2</h2>
 
                     </div>
@@ -42,6 +43,7 @@
                     <div class="carousel-caption">
                         <a class="btn btn-onboard-banner" href="#" role="button">Link</a>
                         <a class="btn btn-onboard-banner" href="#" role="button">Link</a>
+
                         <h2>Caption 3</h2>
 
                     </div>
@@ -59,8 +61,5 @@
         </header>
 
     </div>
-
-
-
 
 </div>
