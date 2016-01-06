@@ -7,161 +7,56 @@
         </div>
     </div>
 
-    <%-- MODULES SECTION START --%>
-    <div class="col-lg-2 col-lg-offset-1 col-sm-6">
-        <div class="onboard-module text-center">
+    <% loop $Children %>
+        <%-- If module is the first in the list use this code to offset the col by 1 --%>
+        <% if $First %>
+            <div class="col-lg-2 col-lg-offset-1 col-sm-6">
+                <div class="onboard-module text-center">
 
-            <span class="glyphicon glyphicon-home module-icon" aria-hidden="true"></span>
+                    <span class="glyphicon module-icon $iconClass" aria-hidden="true"></span>
 
-            <h2 style="font-family: GustanExtraBlack;">The Hub</h2>
+                    <h2>$Title</h2>
 
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
+                    <p>$Content
+                    </p>
 
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
+                    <a class="btn btn-module-transparent" href="$Link" role="button">Link</a>
+                </div>
+            </div>
 
-    <div class="col-lg-2 col-sm-6">
-        <div class="onboard-module text-center">
-            <span class="glyphicon glyphicon-calendar module-icon" aria-hidden="true"></span>
+        <% else_if $Pos == 6 %>
+            <%-- if the module is the sixth item in the list run this code --%>
+            <div class="col-lg-2 col-lg-offset-1 col-sm-6">
+                <div class="onboard-module text-center">
+                    <span class="glyphicon module-icon $iconClass" aria-hidden="true"></span>
 
-            <h2 style="font-family: GustanBold;">Student Manager</h2>
+                    <h2>$Title</h2>
 
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
+                    <p>$Content
+                    </p>
 
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
+                    <a class="btn btn-module-transparent" href="$Link" role="button">Link</a>
+                </div>
+            </div>
 
-    <div class="col-lg-2 col-sm-6 text-center">
-        <div class="onboard-module">
-            <span class="glyphicon glyphicon-tasks module-icon" aria-hidden="true"></span>
+        <% else %>
+            <%-- if the module is not the first or sixth module in the list run this code --%>
+            <div class="col-lg-2 col-sm-6">
+                <div class="onboard-module text-center">
+                    <span class="glyphicon module-icon $iconClass" aria-hidden="true"></span>
 
-            <h2 style="font-family: GustanMedium;">Leave</h2>
+                    <h2 style="font-family: GustanBold;">$Title</h2>
 
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
+                    <p>$Content
+                    </p>
 
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
+                    <a class="btn btn-module-transparent" href="$Link" role="button">Link</a>
+                </div>
+            </div>
 
-    <div class="col-lg-2 col-sm-6">
-        <div class="onboard-module text-center">
-            <span class="glyphicon glyphicon-user module-icon" aria-hidden="true"></span>
+        <% end_if %>
 
-            <h2 style="font-family: GustanLight;">Learning</h2>
-
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-sm-6">
-        <div class="onboard-module text-center">
-            <span class="glyphicon glyphicon-book module-icon" aria-hidden="true"></span>
-
-            <h2>Communication</h2>
-
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-lg-offset-1 col-sm-6">
-        <div class="onboard-module text-center">
-            <span class="glyphicon glyphicon-star module-icon" aria-hidden="true"></span>
-
-            <h2>Positive Psychology</h2>
-
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-sm-6 text-center">
-        <div class="onboard-module">
-            <span class="glyphicon glyphicon-file module-icon" aria-hidden="true"></span>
-
-            <h2>Pastoral Care</h2>
-
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-sm-6">
-        <div class="onboard-module text-center">
-            <span class="glyphicon glyphicon-folder-open module-icon" aria-hidden="true"></span>
-
-            <h2>Reports Analysis</h2>
-
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-sm-6">
-        <div class="onboard-module text-center">
-            <span class="glyphicon glyphicon-folder-open module-icon" aria-hidden="true"></span>
-
-            <h2>Medical</h2>
-
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
-
-    <div class="col-lg-2 col-sm-6">
-        <div class="onboard-module text-center">
-            <span class="glyphicon glyphicon-folder-open module-icon" aria-hidden="true"></span>
-
-            <h2>Resources</h2>
-
-            <p>it is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English.
-            </p>
-
-            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-        </div>
-    </div>
-    <%-- MODULES SECTION END --%>
-
+    <% end_loop %>
 
 </div>
-
-
 

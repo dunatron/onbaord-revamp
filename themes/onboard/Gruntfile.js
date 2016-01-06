@@ -78,7 +78,8 @@ module.exports = function (grunt) {
                     "css/base-styles.css": "resources/less/styles.less",
                     "css/homepage.css": "resources/less/homepage.less",
                     "css/job-details.css": "resources/less/job-details.less",
-                    "css/job-listing.css": "resources/less/job-listing.less"
+                    "css/job-listing.css": "resources/less/job-listing.less",
+                    "css/module-page.css": "resources/less/modulepage.less"
                 }
             }
         },

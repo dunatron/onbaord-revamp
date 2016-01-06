@@ -15,7 +15,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#ee3e8b">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="$ThemeDir/css/base-styles.css">
-    <link rel="stylesheet" href="$ThemeDir/css/homepage.css">
     <link rel="stylesheet" href="$ThemeDir/css/style.css">
 
 </head>
@@ -37,7 +36,11 @@
 <% include NavBar %>
     <div class="site-content-wrapper">
         $Layout
-        $Form
+            <% if $Form %>
+                <div style="height: 100px;"></div>
+                $Form
+            <% end_if %>
+
     </div>
 <% include Footer %>
 
