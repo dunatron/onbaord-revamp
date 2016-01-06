@@ -3,11 +3,21 @@
   margin: 0;
   min-height: 30px;
 
-  .navbar-brand {
-    @media(max-width:400px){
-      display: none !important;
+  .container{
+    @media(max-width:992px){
+      margin: 0 5px;
+      width: 100%;
     }
   }
+
+  .navbar-brand {
+    @media(max-width:400px){
+      img {
+        width:150px;
+      }
+    }
+  }
+
 }
 
 .TopBar p{

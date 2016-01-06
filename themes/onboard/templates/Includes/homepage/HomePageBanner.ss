@@ -17,10 +17,12 @@
                     <!-- Set the first background image using inline CSS below. -->
                     <div class="fill" style="background-image:url('$ThemeDir/images/banner-blue-building.jpg');"></div>
                     <div class="carousel-caption">
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+
 
                         <h2>Caption 1</h2>
+
+                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
                     </div>
 
 
@@ -30,10 +32,12 @@
                     <div class="fill"
                          style="background-image:url('$ThemeDir/images/banner-building-lights.jpeg');"></div>
                     <div class="carousel-caption">
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+
 
                         <h2>Caption 2</h2>
+
+                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
 
                     </div>
                 </div>
@@ -41,10 +45,12 @@
                     <!-- Set the third background image using inline CSS below. -->
                     <div class="fill" style="background-image:url('$ThemeDir/images/banner-tall-building.jpg');"></div>
                     <div class="carousel-caption">
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+
 
                         <h2>Caption 3</h2>
+
+                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
 
                     </div>
                 </div>

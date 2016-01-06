@@ -11,6 +11,20 @@
     /*z-index: 500;*/
     /*background-size:cover;*/
     position:relative;
+
+    #myCarousel{
+      .carousel-control{
+        color: @color-green;
+        font-size: 80px;
+
+        .icon-next{
+          font-size: 80px;
+        }
+        .icon-prev{
+          font-size: 80px;
+        }
+      }
+    }
   }
 
   .carousel,
@@ -28,16 +42,20 @@
     left: 0;
     right: 0;
     bottom:0;
-    padding: 20px 0;
+    padding: 10px 0;
     z-index: 100;
 
-    .btn-module-transparent {
-      font-family: GustanExtraBlack;
+    h2 {
+      display: inline;
+      color: @color-white;
+      font-family: GustanBold;
+      font-size: 20px;
     }
 
-  }
-  .carousel-caption h2 {
-    display: inline;
+    .btn-module-transparent {
+      font-family: GustanBold;
+    }
+
   }
 
   .fill {

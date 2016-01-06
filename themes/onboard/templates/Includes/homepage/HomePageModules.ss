@@ -13,7 +13,7 @@
 
             <span class="glyphicon glyphicon-home module-icon" aria-hidden="true"></span>
 
-            <h2>The Hub</h2>
+            <h2 style="font-family: GustanExtraBlack;">The Hub</h2>
 
             <p>it is a long established fact that a reader will be distracted by the readable content of a page when
                 looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
@@ -28,7 +28,7 @@
         <div class="onboard-module text-center">
             <span class="glyphicon glyphicon-calendar module-icon" aria-hidden="true"></span>
 
-            <h2>Student Manager</h2>
+            <h2 style="font-family: GustanBold;">Student Manager</h2>
 
             <p>it is a long established fact that a reader will be distracted by the readable content of a page when
                 looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
@@ -43,7 +43,7 @@
         <div class="onboard-module">
             <span class="glyphicon glyphicon-tasks module-icon" aria-hidden="true"></span>
 
-            <h2>Leave</h2>
+            <h2 style="font-family: GustanMedium;">Leave</h2>
 
             <p>it is a long established fact that a reader will be distracted by the readable content of a page when
                 looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
@@ -58,7 +58,7 @@
         <div class="onboard-module text-center">
             <span class="glyphicon glyphicon-user module-icon" aria-hidden="true"></span>
 
-            <h2>Learning</h2>
+            <h2 style="font-family: GustanLight;">Learning</h2>
 
             <p>it is a long established fact that a reader will be distracted by the readable content of a page when
                 looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution

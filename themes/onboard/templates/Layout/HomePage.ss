@@ -6,3 +6,6 @@
 
 <%-- Section-homepage-coming-soon --%>
 <% include HomePageComingSoon %>
+
+<%-- Section-homepage-client-logos --%>
+<% include HomePageClientLogos %>
