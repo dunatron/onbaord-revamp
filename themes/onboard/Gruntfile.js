@@ -39,7 +39,10 @@ module.exports = function (grunt) {
                         "resources/js/onscreen.js",
                         'resources/js/banner.js',
                         'resources/js/shutter.js',
-                        'resources/js/information.js'
+                        'resources/js/information.js',
+                        'resources/js/nicescroll.min.js',
+                        'resources/js/nicescroll.plus.js',
+                        'resources/js/client-logo-scroller.js'
                     ],
                     'js/base-scripts.js': [
                         "resources/js/base.js"

@@ -1,0 +1,33 @@
+.client-logo-wrapper {
+
+  h2 {
+    font-family: GustanBold;
+    font-size: 20px;
+  }
+
+  .client-logo-header {
+    padding: 50px;
+  }
+
+  .client-logo-scroller {
+    .container {
+      width: 100%;
+    }
+    #main-content {
+      min-height: 100%;
+      height: auto;
+
+    }
+    #main-content > .row {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+    }
+    #main-content > .row [class*="col-lg"], #main-content > .row [class*="col-md"], #main-content > .row [class*="col-sm"] {
+      float: none;
+      display: inline-block;
+    }
+  }
+}
+
+

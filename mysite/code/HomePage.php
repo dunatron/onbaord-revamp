@@ -8,12 +8,28 @@
 class HomePage extends Page {
 
     private static $has_many = array(
-        'ModulePages' => 'ModulePage'
+        'ModulePages' => 'ModulePage',
+        'ClientLogos' => 'ClientLogo'
+
     );
 
     private static $allowed_children = array(
         'ModulePage'
     );
+
+    public function getCMSFields() {
+        $fields = parent::getCMSFields();
+
+        //MAIN ASSETS ADDED TO CMS
+        $fields->addFieldToTab('Root.Logos', GridField::create(
+            'Logo',
+            'Logos onBoard',
+            $this->ClientLogos(),
+            GridFieldConfig_RecordEditor::create()
+        ));
+
+        return $fields;
+    }
 
 }
 
