@@ -36,6 +36,7 @@ class Page_Controller extends ContentController
         Requirements::set_force_js_to_bottom(true);
         Requirements::javascript('http://code.jquery.com/jquery-2.1.4.min.js');
         Requirements::javascript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
+        Requirements::css($this->ThemeDir().'/css/homepage.css');
         Requirements::javascript($this->ThemeDir().'/js/homepage.js');
     }
 }

@@ -3,6 +3,17 @@
         <div class="row text-center" id="modules-text">
             <hr>
             <h2>onBoard Management System</h2>
+
+
+            <% if CurrentMember %>
+                            <% control CurrentMember %>
+                                You are logged in as $Name | <a href="$Link">Edit Profile</a> | <a href="Security/logout">Logout</a>
+                            <% end_control %>
+                        <% else %>
+                            <a href="Security/login">Login</a> | <a href="$Page(register).Link">Register</a>
+                        <% end_if %>
+
+
             <hr>
         </div>
     </div>

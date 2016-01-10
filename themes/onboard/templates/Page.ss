@@ -35,6 +35,10 @@
 <div class="container-fluid" id="site-wrapper">
 <% include NavBar %>
     <div class="site-content-wrapper">
+
+
+
+
         $Layout
             <% if $Form %>
                 <div style="height: 100px;"></div>
