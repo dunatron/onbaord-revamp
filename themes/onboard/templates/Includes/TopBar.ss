@@ -8,18 +8,15 @@
             <div class="social-icons pull-right">
                 <i class="fa fa-linkedin"></i>
                 <i class="fa fa-facebook"></i>
-                <i class="fa fa-sign-in"></i>
-            </div>
-
-            <p class="memberLinks">
                 <% if CurrentMember %>
                     <% loop CurrentMember %>
-                        You are logged in as $Name | <a href="$Link">Edit Profile</a> | <a href="Security/logout">Logout</a>
+                        | <span>$Name</span> | <span><a href="$Link">Edit Profile</a></span> | <a href="Security/logout"><i class="fa fa-sign-out"></i></a>
                     <% end_loop %>
                 <% else %>
-                    <a href="Security/login">Login</a> | <a href="$Page(register).Link">Register</a>
+                    <a href="Security/login"><i class="fa fa-sign-in"></i></a>
                 <% end_if %>
-            </p>
+
+            </div>
         </div>
     </div>
 
