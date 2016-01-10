@@ -20,7 +20,11 @@
                     <p>$Content
                     </p>
 
-                    <a class="btn btn-module-transparent" href="$Link" role="button">Link</a>
+
+                    <a href="$Link">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                    </a>
+
                 </div>
             </div>
 
@@ -35,7 +39,11 @@
                     <p>$Content
                     </p>
 
-                    <a class="btn btn-module-transparent" href="$Link" role="button">Link</a>
+
+                    <a href="$Link">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                    </a>
+
                 </div>
             </div>
 
@@ -50,7 +58,11 @@
                     <p>$Content
                     </p>
 
-                    <a class="btn btn-module-transparent" href="$Link" role="button">Link</a>
+
+                    <a href="$Link">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                    </a>
+
                 </div>
             </div>
 

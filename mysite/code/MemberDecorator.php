@@ -7,6 +7,12 @@
  */
 class MemberDecorator extends DataExtension {
 
+    // Add Image field for Member/School Logo1
+    private static $has_one = array(
+        'Logo' => 'Image'
+    );
+
+
     // Add extra Database fields
     public function extraStatics($class = null, $extension = null)
     {
@@ -25,7 +31,15 @@ class MemberDecorator extends DataExtension {
         $fields->addFieldToTab("Root.Profile", new TextField('JobTitle', 'Job Title'));
         $fields->addFieldToTab("Root.Profile", new TextField('Website', 'Website', 'http://'));
         $fields->addFieldToTab("Root.Profile", new TextareaField('Blurb', 'Blurb'));
+
+        $fields->addFieldToTab('Root.Profile', $logo = UploadField::create('Logo'));
+
+        //Set allowed upload extensions
+        $logo->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
+
+        $logo->setFolderName('Member-Logos');
     }
+
 
     // Link to the edit profile page
     function Link()

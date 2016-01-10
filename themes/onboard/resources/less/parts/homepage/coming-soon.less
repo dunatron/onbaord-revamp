@@ -1,8 +1,25 @@
 .coming-soon {
 
+  .container{
+
+
+    .nav-tabs {
+
+      .active {
+        color: darken(@color-green, 20%);
+        a {
+          color: darken(@color-green, 20%);
+        }
+      }
+
+    }
+
+  }
+
   h2 {
     font-family: GustanBold;
     font-size: 20px;
+    color: @color-other-grey;
 
   }
 
@@ -10,11 +27,16 @@
     font-family: GustanBold;
     font-size: 20px;
     padding: 15px 0;
+    color: @color-other-grey;
   }
 
   a {
     font-family: GustanBold;
     color: @color-other-grey;
+
+    &:hover, &:focus {
+      color: darken(@color-green, 20%);
+    }
 
   }
 

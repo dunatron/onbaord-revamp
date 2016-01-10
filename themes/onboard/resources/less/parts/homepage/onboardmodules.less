@@ -4,8 +4,19 @@
     max-width: 1800px;
   }
 
+  a {
+    color: darken(@color-green, 20%);
+  }
+
   .glyphicon {
     font-size: 40px;
+    color: @color-other-grey;
+
+  }
+
+  .glyphicon-plus-sign {
+    color: darken(@color-green, 20%);
+    font-size: 30px;
   }
 
   h2 {
@@ -13,6 +24,7 @@
     line-height: 1.1;
     font-family: GustanBold;
     font-weight: 200;
+    color: @color-other-grey;
   }
   #modules-text {
     padding: 30px 0 50px 0;
@@ -31,6 +43,11 @@
     padding: 0;
     position: relative;
     top: -20px;
+    border: 2px solid darken(@color-green, 20%);
+    /*border-radius: 15px 50px;
+    width: 150px;*/
+    border-radius: 100px;
+    padding: 20px;
   }
 
   /* onBoard Module / Panels Section */
@@ -70,21 +87,21 @@
 
 
     .btn-module-transparent {
-      border-width: 2.166666666666667px;
-      border-color: @color-grey;
+      border-width: 1.166666666666667px;
+      border-color: @color-other-grey;
       border-style: solid;
       //max-height: 24px;
       //min-height: 24px;
       background: transparent;
       font-family: GustanBold;
-      color: @color-grey;
+      color: @color-other-grey;
       font-size: 15.73px;
       font-weight: 900;
       //line-height: 58px;
       text-align: left;
       transform: scaleY(1.009);
       &:hover, &:focus {
-        border-color: darken(@color-grey, 20%);
+        border-color: darken(@color-other-grey, 20%);
       }
     }
 

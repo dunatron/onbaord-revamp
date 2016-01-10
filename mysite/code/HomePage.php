@@ -25,4 +25,10 @@ class HomePage_Controller extends Page_Controller
         parent::init();
         Requirements::css($this->ThemeDir().'/css/homepage.css');
     }
+
+    // Return all Members(use this on template to loop client logos)
+    function pullMembers(){
+        $members = DataObject::get('Member');
+        return $members;
+    }
 }

@@ -11,50 +11,57 @@
         <div class="container" id="main-content">
             <div class="row">
 
+                <% loop $pullMembers %>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                        <h1>$FirstName </h1>
 
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <% with $Logo.CroppedImage(250, 100) %>
+                            <img class="img-responsive" src="$URL" width="$Width" height="$Height">
+                        <% end_with %>
+                    </div>
+                <% end_loop %>
+
+
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <h1>ASDF </h1>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <h1>ASDF </h1>
                 </div>
             </div>

@@ -10,7 +10,9 @@
 
         $Content
 
-        <% include ModuleVideo %>
+        <% if CurrentMember %>
+            <% include ModuleVideo %>
+        <% end_if %>
 
     </div>
 </div>
