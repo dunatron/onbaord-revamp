@@ -3,19 +3,18 @@
  * Created by PhpStorm.
  * User: Heath
  * Date: 6/01/16
- * Time: 8:58 PM
+ * Time: 8:58 PM.
  */
-
-class ModuleVideo extends DataObject {
-
+class ModuleVideo extends DataObject
+{
     private static $db = array(
         'VideoURL' => 'Text',
         'Title' => 'Text',
-        'Description' => 'Text'
+        'Description' => 'Text',
     );
 
     private static $has_one = array(
-        'ModulePage' => 'ModulePage'
+        'ModulePage' => 'ModulePage',
     );
 
     public function getCMSFields()
@@ -27,7 +26,5 @@ class ModuleVideo extends DataObject {
         );
 
         return $fields;
-
     }
-
 }
