@@ -13,6 +13,32 @@
         --%>
             <!-- Wrapper for Slides -->
             <div class="carousel-inner">
+
+               <%--<!-- Repeat HomeSlides, create condition to check if first and give class of active -->--%>
+                <%--<% loop $HomeSlides %>--%>
+                    <%--<% if $First %>--%>
+
+                    <%--<% end_if %>--%>
+
+                        <%--<div class="<%if $First %>item active<% else %>item<% end_if %>">--%>
+                        <%--<!-- Set the first background image using inline CSS below. -->--%>
+                        <%--<div class="fill" style="background-image:url('../../../../assets/home-slides/$Photo.Filename');"></div>--%>
+
+                            <%--<div class="fill" style="background-image:url('../../../../../assets/home-slides/banner-blue-building.jpg');"></div>--%>
+                        <%--<div class="carousel-caption">--%>
+
+
+                            <%--<h2>Caption 1</h2>--%>
+
+                            <%--<a class="btn btn-module-transparent" href="#" role="button">Link</a>--%>
+                            <%--<a class="btn btn-module-transparent" href="#" role="button">Link</a>--%>
+                        <%--</div>--%>
+
+
+                    <%--</div>--%>
+                <%--<% end_loop %>--%>
+
+
                 <div class="item active">
                     <!-- Set the first background image using inline CSS below. -->
                     <div class="fill" style="background-image:url('$ThemeDir/images/banner-blue-building.jpg');"></div>
