@@ -9,3 +9,6 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'onboard'
+
+GDBackend:
+  default_quality: 90

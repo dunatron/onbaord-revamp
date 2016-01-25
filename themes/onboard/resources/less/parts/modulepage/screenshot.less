@@ -1,34 +1,131 @@
 .build-pc {
 
-  #build-pc-top{
-    display: block;
-  }
-
   .img-responsive {
     display: inline-block;
   }
 
-  #build-pc-left{
+// EVEN
+
+  #build-pc-top-even{
+    display: block;
+
+  }
+
+  #build-pc-left-even{
+    display: inline-block;
+    position: relative;
+    left: 1px;
+
+  }
+
+  #build-pc-right-even{
+    display: inline-block;
+    position: relative;
+    left: -10px;
+
+
+  }
+
+  #build-pc-bottom-even{
+    display: block;
+
+
+  }
+
+  #build-pc-content-even {
+    position: relative;
+    left: -3px;
+    .left-mobile-screenshot();
+
+  }
+
+//  ODD
+
+  #build-pc-top-odd{
+    display: block;
+  }
+
+  #build-pc-left-odd{
     display: inline-block;
     position: relative;
     left: 1px;
   }
 
-  #build-pc-right{
+  #build-pc-right-odd{
     display: inline-block;
     position: relative;
     left: -10px
 
   }
 
-  #build-pc-bottom{
+  #build-pc-bottom-odd{
     display: block;
 
   }
 
-  #build-pc-content {
+  #build-pc-content-odd {
     position: relative;
     left: -3px;
+    width: 400px;
+    height: 246px;
+
+    .left-mobile-screenshot();
+
+    @media @max699 {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (min-width: 1200px){
+      width: 400px;
+      height: 246px;
+
+    }
   }
 
+}
+
+.build-text{
+
+  h2 {
+    text-align: left;
+    padding: 0 0 0 0;
+    .left-mobile-screenshot();
+  }
+
+  p {
+
+  }
+
+}
+
+.build-pc-even{
+  float: right;
+  .left-mobile-screenshot();
+}
+
+.build-pc-odd{
+  float: left;
+
+}
+
+.build-text-even{
+  float: left;
+  .left-mobile-screenshot();
+}
+
+.build-text-odd{
+  float: right;
+  .left-mobile-screenshot();
+}
+
+.container-even {
+  background-color: lighten(@color-other-grey, 20%);
+  padding: 30px 15px;
+}
+
+.container-odd {
+  background-color: darken(@color-green, 20%);
+  padding: 30px 15px;
 }
