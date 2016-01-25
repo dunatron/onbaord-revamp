@@ -1,5 +1,4 @@
-<div class="menu-buffer"></div>
-<%-- above class is to compensate for the menu overlaying the content --%>
+
 
 <div class="module-page">
     <div class="container">
@@ -8,7 +7,11 @@
             $Breadcrumbs
         </div>
 
+        <hr>
         $Content
+        <hr>
+
+        <% include ModuleScreenshot %>
 
         <% if CurrentMember %>
             <% include ModuleVideo %>

@@ -7,7 +7,7 @@
             <p class="savedMessage">You have successfully registered!</p>
              
             <p>Your details are as follows: </p>
-            <% loop CurrentMember %>
+            <% loop $CurrentMember %>
                 <p>
                     Name: $Name<br />
                     Email: $Email<br />

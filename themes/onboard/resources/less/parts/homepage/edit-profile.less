@@ -1,0 +1,80 @@
+.typography {
+  text-align: center;
+
+  h2 {
+
+  }
+
+  form {
+
+    fieldset, label {
+      font-size: 20px;
+      padding: 20px;
+      color: @color-other-grey;
+    }
+
+    p {
+      font-size: 20px;
+      padding: 20px;
+      color: darken(@color-green, 20%);
+    }
+
+    a {
+      color: darken(@color-green, 20%);
+      text-decoration: none;
+
+      &:hover, &:focus {
+        color: darken(@color-green, 30%);
+      }
+    }
+
+    .text {
+      text-align: center;
+    }
+
+    .message {
+      text-align: center;
+    }
+
+    input {
+      font-size: 20px;
+      padding: 20px;
+      width: 400px;
+    }
+
+    #Form_EditProfileForm_action_SaveProfile {
+      border-width: 2.166666666666667px;
+      border-color: darken(@color-green, 20%);
+      border-style: solid;
+      //max-height: 24px;
+      //min-height: 24px;
+      background: transparent;
+      font-family: GustanExtraBlack;
+      border-radius: 5px;
+      margin: 0 10px;
+
+      font-family: @font-primary;
+      color: darken(@color-green, 20%);
+      font-size: 16px;
+      font-weight: 900;
+      //line-height: 58px;
+      text-align: center;
+      transform: scaleY(1.009);
+      &:hover, &:focus {
+
+        border-color: darken(@color-green, 20%);
+        background-color: darken(@color-green, 20%);
+        color: #FFF;
+      }
+    }
+
+    textarea{
+      min-width: 400px;
+    }
+
+    div {
+      padding: 0 0 15px;
+    }
+
+  }
+}

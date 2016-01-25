@@ -34,6 +34,8 @@
 <![endif]-->
 <div class="container-fluid" id="site-wrapper">
 <% include NavBar %>
+    <div class="menu-buffer"></div>
+    <%-- above class is to compensate for the menu overlaying the content --%>
     <div class="site-content-wrapper">
 
 
