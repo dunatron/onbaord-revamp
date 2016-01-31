@@ -47,15 +47,33 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="$AbsoluteBaseURL">
                 <img src="$ThemeDir/images/onBoard_Logo_250x64.png" class="img-responsive">
             </a>
         </div>
         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav pull-left">
+                <% loop $Menu(1) %>
+                    <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                <% end_loop %>
+
+                <%--<li class="active"><a href="#">Home</a></li>--%>
+                <%--<li><a href="#about">About</a></li>--%>
+                <%--<li><a href="#contact">Contact</a></li>--%>
+            </ul>
             <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <%--<div class="social-icons pull-right">--%>
+                    <%--<i class="fa fa-linkedin"></i>--%>
+                    <%--<i class="fa fa-facebook"></i>--%>
+                    <%--<% if CurrentMember %>--%>
+                        <%--<% loop CurrentMember %>--%>
+                            <%--| <span>$Name</span> | <span><a href="$Link">Edit Profile</a></span> | <a href="Security/logout"><i class="fa fa-sign-out"></i></a>--%>
+                        <%--<% end_loop %>--%>
+                    <%--<% else %>--%>
+                        <%--<a href="Security/login"><i class="fa fa-sign-in"></i></a>--%>
+                    <%--<% end_if %>--%>
+
+                <%--</div>--%>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
