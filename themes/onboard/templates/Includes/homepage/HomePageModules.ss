@@ -1,9 +1,9 @@
 <div class="container-fluid onboard-modules">
     <div class="container">
         <div class="row text-center" id="modules-text">
-            <hr>
+
             <h2>onBoard Management System</h2>
-            <hr>
+
         </div>
     </div>
 
