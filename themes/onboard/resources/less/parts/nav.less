@@ -28,6 +28,9 @@ body {
 .onboard-nav {
   background-color: @color-grey;
   height: 85px;
+  image-rendering: pixelated;
+  -webkit-transition: width 1s, height 1s; /* Safari */
+  transition: width 1s, height 1s;
   .container {
 
     @media @max767 {
@@ -41,8 +44,9 @@ body {
       transition: width 1s, height 1s;
 
       .navbar-toggle {
-        background-color: @color-green;
+        background-color: @color-grey;
         .icon-bar{
+          background-color: @color-green;
 
         }
       }
@@ -55,19 +59,44 @@ body {
         img {
           width: 250px;
           height: 64px;
+          image-rendering: pixelated;
+          -webkit-transition: width 1s, height 1s; /* Safari */
+          transition: width 1s, height 1s;
         }
       }
     }
     //Header css End
     //Content Start
     .navbar-collapse {
+      border: none;
+
+      @media @max767 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
 
       ul {
+        background-color: @color-grey;
+        @media @max767 {
+          width: 100%;
+          margin: 0 auto;
+        }
         li {
-
+          a{
+            color: #fff;
+            &:hover, &:active {
+              color: @color-grey;
+              background-color: @color-green;
+            }
+          }
         }
 
         .active {
+          a {
+            color: @color-grey;
+            background-color: @color-green;
+          }
 
         }
       }
