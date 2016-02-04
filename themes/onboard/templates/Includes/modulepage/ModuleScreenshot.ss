@@ -22,7 +22,10 @@
                 </div>
 
                 <div class="build-text col-lg-6 build-text-$EvenOdd">
-                    <h2>$Title</h2>
+                    <div class="row">
+                        <h2>$Title</h2>
+                    </div>
+
                     $Content
                 </div>
             </div>
