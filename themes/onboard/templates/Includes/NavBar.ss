@@ -62,13 +62,14 @@
                     <a href="#" id="social-item-link"><i class="fa fa-facebook"></i></a>
                 </li>
 
-                <li class="dropdown" id="social-item-holder">
+                <li class="dropdown">
                     <a href="#"  id="social-item-link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
 
                         <% if CurrentMember %>
                             <% loop CurrentMember %>
+                                <li><h2 id="current-member">$Name</h2></li>
                                 <li><a href="$Link">Edit Profile <i class="fa fa-pencil-square-o"></i></a></li>
                                 <li><a href="Security/logout">Log - Out <i class="fa fa-sign-out"></i></a></li>
                             <% end_loop %>

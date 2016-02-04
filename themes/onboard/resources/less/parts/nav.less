@@ -24,13 +24,27 @@
     #social-item-link {
       padding: 15px 0;
 
-      &:hover, &:active {
+      &:hover, &:active,{
         color: @color-green;
         background-color: @color-grey;
+      }
+
+      &:visited {
+        color: #FFF;
+        background-color: @color-grey;
+      }
+
+      @media @max767 {
+        text-align: center;
       }
     }
 
     #social-item-holder{
+
+      @media @max767 {
+        width: 49%;
+        display: inline-block;
+      }
 
     }
 
@@ -89,9 +103,19 @@
           margin: 0 auto;
         }
 
+        #current-member {
+          font-size: 14px;
+          text-align: center;
+          color: @color-green;
+        }
+
         .dropdown-menu {
           margin: 0;
           border: none;
+
+          a {
+            text-align: center;
+          }
         }
 
 
