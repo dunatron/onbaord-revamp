@@ -2,12 +2,12 @@
     <div class="container-fluid coming-soon-modules">
         <div class="container">
             <div class="row text-center" id="modules-text">
-                <hr>
+
                 <h2>In Development</h2>
 
                 <p id="sub-header">The team at onBoard can support you boarding school through confidential consultancy
                     work. The onBoard team specialise in</p>
-                <hr>
+
             </div>
         </div>
 

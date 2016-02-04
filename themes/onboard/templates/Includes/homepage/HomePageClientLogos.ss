@@ -1,8 +1,6 @@
 <!-- Begin page content -->
 <div class="client-logo-wrapper">
     <div class="container client-logo-header">
-        <hr>
-        <hr>
         <h2 class="text-center">Our Clients</h2>
         <p class="text-center">Scroll below for all boarding houses that are 'onBoard'</p>
     </div>

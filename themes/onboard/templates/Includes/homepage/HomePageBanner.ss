@@ -42,14 +42,6 @@
                 <div class="item active">
                     <!-- Set the first background image using inline CSS below. -->
                     <div class="fill" style="background-image:url('$ThemeDir/images/banner-blue-building.jpg');"></div>
-                    <div class="carousel-caption">
-
-
-                        <h2>Caption 1</h2>
-
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-                        <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-                    </div>
 
 
                 </div>
