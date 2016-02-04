@@ -7,6 +7,12 @@
  */
 class AboutUsPage extends Page
 {
+
+    private static $db = array(
+        'Title' => 'Text',
+    );
+
+
     private static $has_many = array(
 
     );
@@ -18,6 +24,7 @@ class AboutUsPage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+        $fields->addFieldToTab('Root.Main', TextField::create('Title', 'Title for the about page'), 'Content');
 
         return $fields;
     }

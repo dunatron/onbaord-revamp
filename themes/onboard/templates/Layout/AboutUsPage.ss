@@ -1,1 +1,4 @@
-<h1>About On Board</h1>
+<div class="container">
+    <h1>$Title</h1>
+    $Content
+</div> 
