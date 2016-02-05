@@ -10,12 +10,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <% if $SearchForm %>
-                    <span class="search-dropdown-icon">L</span>
-                    <div class="search-bar">
-                        $SearchForm
-                    </div>
-                <% end_if %>
+                $ModuleSearchForm
             </div>
         </div>
 
