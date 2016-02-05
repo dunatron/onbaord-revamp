@@ -1,6 +1,6 @@
 <% loop $ModuleScreenshots %>
 
-    <div class="row screen-shot-row">
+    <div class="screen-shot-row">
 
         <div class="container-fluid container-$EvenOdd">
             <div class="container">

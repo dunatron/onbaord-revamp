@@ -16,10 +16,7 @@
                             $Title
                         <% end_if %>
                     </a>
-                    <p>$Content.LimitWordCountXML</p>
-                    <a class="readMoreLink" href="$Link"
-                       title="Read more about &quot;{$Title}&quot;"
-                            >Read more about &quot;{$Title}&quot;...</a>
+
                 </li>
             <% end_loop %>
         </ul>

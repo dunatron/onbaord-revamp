@@ -53,7 +53,7 @@
         </div>
         <div class="collapse navbar-collapse">
 
-            <ul class="nav navbar-nav pull-left">
+            <ul class="nav navbar-nav pull-right">
 
                 <li id="social-item-holder">
                     <a href="#" id="social-item-link"><i class="fa fa-linkedin"></i></a>
@@ -62,7 +62,7 @@
                     <a href="#" id="social-item-link"><i class="fa fa-facebook"></i></a>
                 </li>
 
-                <li class="dropdown">
+                <li class="dropdown" >
                     <a href="#"  id="social-item-link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -80,7 +80,7 @@
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav pull-right">
+            <ul class="nav navbar-nav pull-left">
                 <% loop $Menu(1) %>
                     <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
                 <% end_loop %>

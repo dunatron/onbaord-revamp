@@ -10,9 +10,12 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="search-bar">
-                    $SearchForm
-                </div>
+                <% if $SearchForm %>
+                    <span class="search-dropdown-icon">L</span>
+                    <div class="search-bar">
+                        $SearchForm
+                    </div>
+                <% end_if %>
             </div>
         </div>
 

@@ -5,7 +5,7 @@
  * Date: 25/01/16
  * Time: 5:26 PM
  */
-class TronsContentControllerSearchExtension extends ContentControllerSearchExtension {
+class TronsContentControllerSearchExtension extends Extension {
 
     function results($data, $form, $request) {
         $data = array(
