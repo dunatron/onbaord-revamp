@@ -13,6 +13,7 @@ class ModuleScreenshot extends DataObject {
         'Content' => 'HTMLText'
     );
 
+
     private static $has_one = array(
         'ModulePage' => 'ModulePage',
         'ScreenShot' => 'Image'

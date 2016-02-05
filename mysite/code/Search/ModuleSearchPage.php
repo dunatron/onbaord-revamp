@@ -3,23 +3,38 @@
  * Created by PhpStorm.
  * User: Heath
  * Date: 5/02/16
- * Time: 9:45 PM
+ * Time: 11:17 PM
  */
+
 class ModuleSearchPage extends Page {
+
 
 }
 
 class ModuleSearchPage_Controller extends Page_Controller {
 
-    public function ModuleSearchForm(){
+    public function index(SS_HTTPRequest $request) {
+        $screenshots = ModuleScreenshot::get()->limit(20);
 
-        // Create The Form
+        if($search = $request->getVar('Title')){
+            $screenshots = $screenshots->filter(array(
+                'Title:PartialMatch' => $search
+            ));
+        }
+
+        return array(
+            'Results' => $screenshots
+        );
+    }
+
+    public function ModuleSearchForm() {
+
         $form = Form::create(
             $this,
             'ModuleSearchForm',
             FieldList::create(
                 TextField::create('Title')
-                    ->setAttribute('placeholder', '1 word search')
+                    ->setAttribute('placeholder', '1 Word Search')
                     ->addExtraClass('form-control')
             ),
             FieldList::create(
@@ -27,12 +42,11 @@ class ModuleSearchPage_Controller extends Page_Controller {
                     ->addExtraClass('btn-lg btn-fullcolor')
             )
         );
-        // END The Form
 
-        $form->setFormMethod('GET');
+        $form->setFormMethod('GET')
+             ->setFormAction($this->Link())
+             ->disableSecurityToken();
 
         return $form;
-
     }
-
 }
