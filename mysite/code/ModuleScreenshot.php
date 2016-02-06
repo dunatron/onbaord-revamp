@@ -20,6 +20,16 @@ class ModuleScreenshot extends DataObject {
     );
 
 
+    public function searchableFields() {
+        return array(
+            'Title' => array(
+                'filter' => 'PartialMatchFilter',
+                'title' => 'Title',
+                'field' => 'TextField'
+            )
+        );
+    }
+
     public function updateCMSFields()
     {
         $fields = FieldList::create(

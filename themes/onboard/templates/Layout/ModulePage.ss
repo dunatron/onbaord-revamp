@@ -13,11 +13,10 @@
                 $ModuleSearchForm
             </div>
         </div>
+        <div class="module-content-wrapper">
+            $Content
+        </div>
 
-
-        <hr>
-        $Content
-        <hr>
     </div>
 
     <div class="container-fluid">
