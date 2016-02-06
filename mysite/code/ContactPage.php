@@ -14,6 +14,7 @@ class ContactPage_Controller extends Page_Controller {
 
     private static $allowed_actions = array('ContactForm');
 
+    // Contact form to use in template($ContactForm)
     public function ContactForm() {
         $fields = new FieldList(
             new TextField('Name'),
@@ -25,7 +26,29 @@ class ContactPage_Controller extends Page_Controller {
             new FormAction('submit', 'Submit')
         );
 
-        return new Form($this, 'ContactForm', $fields, $actions);
+        $validator = new RequiredFields('Name', 'Message');
+
+        return new Form($this, 'ContactForm', $fields, $actions, $validator);
+    }
+
+    public function submit($data, $form) {
+        $email = new Email();
+
+        $email->setTo('heath.dunlop.hd@gmail.com');
+        $email->setFrom($data['Email']);
+        $email->setSubject("Contact Message from {$data["Name"]}");
+
+        $messageBody = "
+            <p><strong>Name:</strong> {$data['Name']}</p>
+            <p><strong>Message:</strong> {$data['Message']}</p>
+        ";
+
+        $email->setBody($messageBody);
+        $email->send();
+        return array(
+            'Content' => '<p>Thank you for your feedback.',
+            'Form' => ''
+        );
     }
 
 }
