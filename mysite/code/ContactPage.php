@@ -12,9 +12,9 @@ class ContactPage extends Page {
 
 class ContactPage_Controller extends Page_Controller {
 
-    private static $allowed_actions = array('Form');
+    private static $allowed_actions = array('ContactForm');
 
-    public function Form() {
+    public function ContactForm() {
         $fields = new FieldList(
             new TextField('Name'),
             new EmailField('Email'),
@@ -25,7 +25,7 @@ class ContactPage_Controller extends Page_Controller {
             new FormAction('submit', 'Submit')
         );
 
-        return new Form($this, 'Form', $fields, $actions);
+        return new Form($this, 'ContactForm', $fields, $actions);
     }
 
 }
