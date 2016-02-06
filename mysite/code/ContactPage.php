@@ -47,7 +47,7 @@ class ContactPage_Controller extends Page_Controller {
         $email->send();
         return array(
             'Content' => '<p>Thank you for your feedback.',
-            'Form' => ''
+            'ContactForm' => ''
         );
     }
 
