@@ -9,19 +9,19 @@
  *
  */
 
-class ProductSearchPage extends Page {
+class ScreenShotSearchPage extends Page {
 
     private static $has_many = array (
-        'Products' => 'Product',
+        'Shots' => 'ModuleScreenshot',
     );
 
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Products', GridField::create(
-            'Products',
-            'Products on this page',
-            $this->Products(),
+        $fields->addFieldToTab('Root.ScreenShots', GridField::create(
+            'Shots',
+            'ScreenShots on this page',
+            $this->Shots(),
             GridFieldConfig_RecordEditor::create()
         ));
 
@@ -66,8 +66,49 @@ class ScreenShotSearchPage_Controller extends Page_Controller {
 
     }
 
-   // public function
+    public function ScreenShotSearchForm() {
 
+        $form = Form::create(
+            $this,
+            'ScreenShotSearchForm',
+            FieldList::create(
+                TextField::create('Title')
+                    ->setAttribute('placeholder', 'Title...')
+                    ->addExtraClass('form-control')
+            ),
+            FieldList::create(
+                FormAction::create('doScreenShotSearch', 'Search')
+                    ->addExtraClass('btn-lg')
+            )
+        );
+
+        $form->setFormMethod('GET')
+            ->setFormAction($this->Link())
+            ->disableSecurityToken()
+            ->loadDataFrom($this->request->getVars());
+
+        return $form;
+
+    }
+
+    // Allowed actions, white list below
+    private static $allowed_actions = array(
+        'show'
+    );
+
+    // Render Screen shot TO DO discuss with Jon if he wants 2 screenshots(medium size, Large size)
+    // Second/Large would be a link through to larger image
+    public function show(SS_HTTPRequest $request) {
+        $shot = ModuleScreenshot::get()->byID($request->param('ID'));
+
+        if(!$shot) {
+            return $this->httpError(404, 'That Screen shot could not be found');
+        }
+
+        return array(
+            'ModuleScreenshot' => $shot
+        );
+    }
 
 }
 
