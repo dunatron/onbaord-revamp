@@ -28,7 +28,7 @@ class ContactPage_Controller extends Page_Controller {
 
         $validator = new RequiredFields('Name', 'Message');
 
-        return new Form($this, 'ContactForm', $fields, $actions, $validator);
+        return new Form($this, 'Form', $fields, $actions, $validator);
     }
 
     public function submit($data, $form) {
