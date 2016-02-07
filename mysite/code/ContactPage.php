@@ -75,7 +75,7 @@ class ContactPage_Controller extends Page_Controller {
     public function submit($data, $form) {
         $email = new Email();
 
-        $email->setTo('siteowner@mysite.com');
+        $email->setTo('heath.dunlop.hd@gmail.com');
         $email->setFrom($data['Email']);
         $email->setSubject("Contact Message from {$data["Name"]}");
 
