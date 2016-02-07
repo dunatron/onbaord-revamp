@@ -1,3 +1,4 @@
 <div class="container">
-    $ContactForm
+    <%--$ContactForm--%>
+    $Form
 </div>
