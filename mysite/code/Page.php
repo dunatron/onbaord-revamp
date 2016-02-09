@@ -2,12 +2,11 @@
 
 class Page extends SiteTree
 {
-    private static $db = array(
-    );
+    private static $db = array();
 
-    private static $has_one = array(
-    );
+    private static $has_one = array();
 }
+
 class Page_Controller extends ContentController
 {
     /**
@@ -25,8 +24,6 @@ class Page_Controller extends ContentController
      *
      * @var array
      */
-    private static $allowed_actions = array(
-    );
 
     public function init()
     {
@@ -36,36 +33,84 @@ class Page_Controller extends ContentController
         Requirements::set_force_js_to_bottom(true);
         Requirements::javascript('http://code.jquery.com/jquery-2.1.4.min.js');
         Requirements::javascript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
-        Requirements::css($this->ThemeDir().'/css/homepage.css');
-        Requirements::javascript($this->ThemeDir().'/js/homepage.js');
+        Requirements::css($this->ThemeDir() . '/css/homepage.css');
+        Requirements::javascript($this->ThemeDir() . '/js/homepage.js');
     }
 
-    public function ContactForm() {
-        $myForm = Form::create(
-            $controller,
-            'ContactForm',
-            FieldList::create(
-                TextField::create('YourName','Your name'),
-                TextareaField::create('YourComments','Your comments')
-            ),
-            FieldList::create(
-                FormAction::create('sendContactForm','Submit')
-            ),
-            RequiredFields::create('YourName','YourComments')
+    private static $allowed_actions = array(
+        'HelloForm',
+        'MyForm'
+    );
+
+    // Set session Message
+
+    // Set SessionMessages
+    // http://www.ssbits.com/tutorials/2011/s-new-post-218/
+    public function IsMessages()
+    {
+        $messages = Session::get('Messages');
+        return (!empty($messages));
+    }
+
+    public function addMessage($message, $type = 'success', $canclose = true)
+    {
+        Session::add_to_array('Messages', array(
+            'Message' => $message,
+            'MessageType' => $type,
+            'CanClose' => $canclose
+        ));
+    }
+
+    public function getMessages()
+    {
+        if ($messages = Session::get('Messages')) {
+            Session::clear('Messages');
+            $ArrayList = new ArrayList();
+            foreach ($messages as $message) {
+                $ArrayList->push(new ArrayData(array(
+                    'Message' => $message['Message'],
+                    'MessageType' => $message['MessageType'],
+                    'CanClose' => $message['CanClose']
+                )));
+            }
+            return $ArrayList;
+        }
+    }
+
+// this clears any previous messages and sets only this message
+    public function setMessage($message, $type = 'success', $canclose = true)
+    {
+        Session::clear('Messages');
+        $this->addMessage($message, $type, $canclose);
+    }
+
+
+    // Hello Form
+
+    public function HelloForm()
+    {
+        $fields = new FieldList(
+            TextField::create('Name', 'Your Name'),
+            EmailField::create('Email')
         );
 
-        return $myForm;
+        $actions = new FieldList(
+            FormAction::create("doSayHello")->setTitle("Say hello")
+        );
+
+        $required = new RequiredFields('Name');
+
+        $form = new Form($this, 'HelloForm', $fields, $actions, $required);
+
+        return $form;
     }
 
-    public function sendContactForm($data, $form) {
-        $name = $data['YourName'];
-        $message = $data['YourMessage'];
-        if(strlen($message) < 10) {
-            $form->addErrorMessage('YourMessage','Your message is too short','bad');
-            return $this->redirectBack();
-        }
-
-        return $this->redirect('/some/success/url');
+    public function doSayHello($data, Form $form)
+    {
+        $form->sessionMessage('Hello ' . $data['Name'], 'success');
+        //$this->setMessage('Errorrrrr', 'Error: yo fool, foo is not a bar');
+        $this->setMessage('Thanks ' . $data['Name'] . ' onBoard will be in contact asap', 'success');
+        return $this->redirectBack();
     }
 
 

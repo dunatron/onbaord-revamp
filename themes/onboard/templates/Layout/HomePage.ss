@@ -1,6 +1,9 @@
 <%-- Section-homepage-banner --%>
 <% include HomePageBanner %>
 
+<%-- Include Session Message section --%>
+<% include Message %>
+
 <%-- Section-homepage-modules --%>
 <% include HomePageModules %>
 

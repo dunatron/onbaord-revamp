@@ -1,5 +1,8 @@
 <div class="module-page">
 
+    <%-- Include Session Message section --%>
+    <% include Message %>
+
     <div class="container">
         <div class="Module-Header-Row row">
             <div class="col-md-6">

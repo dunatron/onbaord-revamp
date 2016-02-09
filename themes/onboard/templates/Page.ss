@@ -39,8 +39,6 @@
     <div class="site-content-wrapper">
 
 
-
-
         $Layout
 
             <% if $Form %>
