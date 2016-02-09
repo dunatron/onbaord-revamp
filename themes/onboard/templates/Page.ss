@@ -42,6 +42,7 @@
 
 
         $Layout
+
             <% if $Form %>
                 <div style="height: 100px;"></div>
                 $Form

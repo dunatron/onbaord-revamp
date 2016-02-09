@@ -39,4 +39,34 @@ class Page_Controller extends ContentController
         Requirements::css($this->ThemeDir().'/css/homepage.css');
         Requirements::javascript($this->ThemeDir().'/js/homepage.js');
     }
+
+    public function ContactForm() {
+        $myForm = Form::create(
+            $controller,
+            'ContactForm',
+            FieldList::create(
+                TextField::create('YourName','Your name'),
+                TextareaField::create('YourComments','Your comments')
+            ),
+            FieldList::create(
+                FormAction::create('sendContactForm','Submit')
+            ),
+            RequiredFields::create('YourName','YourComments')
+        );
+
+        return $myForm;
+    }
+
+    public function sendContactForm($data, $form) {
+        $name = $data['YourName'];
+        $message = $data['YourMessage'];
+        if(strlen($message) < 10) {
+            $form->addErrorMessage('YourMessage','Your message is too short','bad');
+            return $this->redirectBack();
+        }
+
+        return $this->redirect('/some/success/url');
+    }
+
+
 }
