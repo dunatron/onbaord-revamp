@@ -15,9 +15,7 @@
                 <p>Created & Developed By <a href="http://dunatron.nz/">TRON STUDIOS</a></p>
             </div>
 
-            <div class="container">
-                <% include ContactForm %>
-            </div>
+            <% include ContactForm %>
 
 
 

@@ -1,4 +1,3 @@
-<div class="container">
+<div class="footer-contact-wrapper">
     $HelloForm
-    $MyForm
 </div>
