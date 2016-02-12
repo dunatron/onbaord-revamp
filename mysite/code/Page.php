@@ -39,7 +39,8 @@ class Page_Controller extends ContentController
 
     private static $allowed_actions = array(
         'HelloForm',
-        'MyForm'
+        'MyForm',
+        'TronsContactForm'
     );
 
     // Set session Message
