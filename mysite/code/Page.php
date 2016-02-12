@@ -87,11 +87,38 @@ class Page_Controller extends ContentController
 
     // Hello Form
 
-    public function HelloForm()
+//    public function HelloForm()
+//    {
+//        $fields = new FieldList(
+//            TextField::create('Name', 'Your Name'),
+//            EmailField::create('Email')
+//        );
+//
+//        $actions = new FieldList(
+//            FormAction::create("doSayHello")->setTitle("Say hello")
+//        );
+//
+//        $required = new RequiredFields('Name');
+//
+//        $form = new Form($this, 'HelloForm', $fields, $actions, $required);
+//
+//        return $form;
+//    }
+//
+//    public function doSayHello($data, Form $form)
+//    {
+//        $form->sessionMessage('Hello ' . $data['Name'], 'success');
+//        //$this->setMessage('Errorrrrr', 'Error: yo fool, foo is not a bar');
+//        $this->setMessage('Thanks ' . $data['Name'] . ' onBoard will be in contact asap', 'success');
+//        return $this->redirectBack();
+//    }
+
+    public function TronsContactForm()
     {
         $fields = new FieldList(
             TextField::create('Name', 'Your Name'),
-            EmailField::create('Email')
+            EmailField::create('Email'),
+            TextareaField::create('Body', 'Message')
         );
 
         $actions = new FieldList(
@@ -100,13 +127,17 @@ class Page_Controller extends ContentController
 
         $required = new RequiredFields('Name');
 
-        $form = new Form($this, 'HelloForm', $fields, $actions, $required);
+        $form = new Form($this, 'TronsContactForm', $fields, $actions, $required);
 
         return $form;
     }
 
     public function doSayHello($data, Form $form)
     {
+        $to = 'heath.dunlop.hd@gmail.com';
+        $subject = 'Website Message';
+        $message = $data['Body'];
+        mail($to, $subject, $message);
         $form->sessionMessage('Hello ' . $data['Name'], 'success');
         //$this->setMessage('Errorrrrr', 'Error: yo fool, foo is not a bar');
         $this->setMessage('Thanks ' . $data['Name'] . ' onBoard will be in contact asap', 'success');
