@@ -117,13 +117,13 @@ class Page_Controller extends ContentController
     public function TronsContactForm()
     {
         $fields = new FieldList(
-            TextField::create('Name', 'Your Name'),
-            EmailField::create('Email'),
-            TextareaField::create('Body', 'Message')
+            new TextField('Name'),
+            new EmailField('Email'),
+            new TextareaField('Message')
         );
 
         $actions = new FieldList(
-            FormAction::create("doSayHello")->setTitle("Say hello")
+            new FormAction('sendEmail', 'Submit')
         );
 
         $required = new RequiredFields('Name');
@@ -133,16 +133,27 @@ class Page_Controller extends ContentController
         return $form;
     }
 
-    public function doSayHello($data, Form $form)
+    public function sendEmail($data, Form $form)
     {
-        $to = 'heath.dunlop.hd@gmail.com';
-        $subject = 'Website Message';
-        $message = $data['Body'];
-        mail($to, $subject, $message);
-        $form->sessionMessage('Hello ' . $data['Name'], 'success');
-        //$this->setMessage('Errorrrrr', 'Error: yo fool, foo is not a bar');
-        $this->setMessage('Thanks ' . $data['Name'] . ' onBoard will be in contact asap', 'success');
-        return $this->redirectBack();
+        $email = new Email();
+
+        $email->setTo('heath.dunlop.hd@gmail.com');
+        $email->setFrom($data['Email']);
+        $email->setSubject("Contact Message from {$data["Name"]}");
+
+        $messageBody = "
+            <p><strong>Name:</strong> {$data['Name']}</p>
+            <p><strong>Message:</strong> {$data['Message']}</p>
+            ";
+
+        $email->setBody($messageBody);
+        $email->send();
+        return array(
+            'Content' => '<p>Thank you for your feedback.</p>',
+            'Form' => ''
+        );
+
+
     }
 
 
