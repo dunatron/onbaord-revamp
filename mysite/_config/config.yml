@@ -12,3 +12,7 @@ SSViewer:
 
 GDBackend:
   default_quality: 90
+
+SiteConfig:
+  extensions:
+    - CustomSiteConfig
