@@ -42,7 +42,9 @@
             <ul class="nav navbar-nav pull-right">
                 <% loop $Menu(1) %>
                     <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+
                 <% end_loop %>
+                <li><a  href="#">Services</a> </li>
 
             </ul>
 

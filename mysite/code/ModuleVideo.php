@@ -14,7 +14,7 @@ class ModuleVideo extends DataObject
     );
 
     private static $has_one = array(
-        'ModulePage' => 'ModulePage',
+        'ResourceModulePage' => 'ResourceModulePage',
     );
 
     public function getCMSFields()
@@ -26,5 +26,9 @@ class ModuleVideo extends DataObject
         );
 
         return $fields;
+    }
+
+    public function Link() {
+        return $this->ResourceModulePage()->Link('show/'.$this->ID);
     }
 }

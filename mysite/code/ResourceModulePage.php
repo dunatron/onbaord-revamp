@@ -2,23 +2,24 @@
 /**
  * Created by PhpStorm.
  * User: Heath
- * Date: 6/01/16
- * Time: 4:47 PM.
+ * Date: 21/02/16
+ * Time: 3:34 PM
  */
-class ModulePage extends Page
+
+class ResourceModulePage extends Page
 {
     private static $db = array(
         'iconClass' => 'Text',
     );
 
     private static $has_one = array(
-        'HomePage' => 'HomePage',
         'ConsultancyPage' => 'ConsultancyPage',
+        'VideoHolder' => 'VideoHolder',
+        'resourceHolder' => 'resourceHolder'
     );
 
     private static $has_many = array(
-        'ModuleVideos' => 'ModuleVideo',
-        'ModuleScreenshots' => 'ModuleScreenshot'
+        'ModuleVideos' => 'ModuleVideo'
     );
 
     private static $can_be_root = false;
@@ -37,21 +38,17 @@ class ModulePage extends Page
             GridFieldConfig_RecordEditor::create()
         ));
 
-        //Add Screenshot tutorials create tab to module page
-        //MAIN ASSETS ADDED TO CMS
-        $fields->addFieldToTab('Root.Screenshots', GridField::create(
-            'Screenshots',
-            'Screenshots for this Module',
-            $this->ModuleScreenshots(),
-            GridFieldConfig_RecordEditor::create()
-        ));
-
         return $fields;
     }
 }
 
-class ModulePage_Controller extends Page_Controller
+class ResourceModulePage_Controller extends Page_Controller
 {
+
+    private static $allowed_actions = array(
+        'show'
+    );
+
     public function init()
     {
         //Pull in parent properties for controller e.g css & js assets
@@ -73,6 +70,20 @@ class ModulePage_Controller extends Page_Controller
     public function getStyleName()
     {
         return 'module-page.css';
+    }
+
+    // Show Video when video ID is pressed
+    public function show(SS_HTTPRequest $request) {
+        $video = ModuleVideo::get()->byID($request->param('ID'));
+
+        if(!$video) {
+            return $this->httpError(404, 'That Video could not be found');
+        }
+
+        return array(
+            'Video' => $video
+        );
+        // Variable to use in template -> $Video
     }
 
 
