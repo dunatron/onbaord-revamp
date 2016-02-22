@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row text-center" id="modules-text">
 
-        <h2>onBoard Management System</h2>
+        <h2>$Title</h2>
 
     </div>
 </div>
