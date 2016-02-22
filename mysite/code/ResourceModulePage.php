@@ -15,8 +15,6 @@ class ResourceModulePage extends Page
 
     private static $has_one = array(
         'ConsultancyPage' => 'ConsultancyPage',
-        'VideoHolder' => 'VideoHolder',
-        'resourceHolder' => 'resourceHolder'
     );
 
     private static $has_many = array(
@@ -55,12 +53,48 @@ class ResourceModulePage_Controller extends Page_Controller
 {
 
     private static $allowed_actions = array(
-        'show'
+        'show',
+        'showfiles',
+        'tronsvids',
+        'tronsfiles'
     );
 
-    public function test2(){
-        die('retrieve file ID here');
+    public function tronsvids(SS_HTTPRequest $request){
+        print_r($request->allParams());
     }
+
+    public function tronsfiles(SS_HTTPRequest $request){
+
+//        echo '<pre>';
+//        var_dump($request);
+//        echo '</pre>';
+//        die('die');
+
+//        return $this->ResourceModulePage()->Link('show/'.$this->ID)
+//            ->renderWith('ResourceModulePageFilesList');
+
+        return $this->renderWith('ResourceModulePageFilesList');
+
+
+
+
+    }
+
+    public function Link($action = null){
+            return $this->LinkOrSection();
+    }
+
+//    public function LinkingMode($action = null) {
+//        $controllerAction = $this->getAction();
+//        if (is_null($controllerAction) && is_null($action))
+//            return MyChildClass::LinkingMode();
+//
+//        if ($action == $controllerAction)
+//            return 'current';
+//        else
+//            return $this->LinkOrSection();
+//    }
+
 
     public function init()
     {

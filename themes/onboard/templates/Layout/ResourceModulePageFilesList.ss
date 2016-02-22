@@ -5,11 +5,12 @@
             $Breadcrumbs
         </div>
         <div class="list-wrapper">
-            <p id="list-desc">List of Videos for $Title</p>
-            <% loop $ModuleVideos %>
+            <p id="list-desc">List of Files for $Title</p>
+            <% loop $ModuleResources %>
                 <a href="$Link">$Title</a>
                 <div class="description">$Description</div>
             <% end_loop %>
         </div>
     </div>
 </div>
+

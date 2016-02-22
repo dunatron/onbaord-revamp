@@ -32,6 +32,9 @@ class ConsultancyPage_Controller extends Page_Controller {
         //Pull in parent properties for controller e.g css & js assets
         parent::init();
         Requirements::css($this->ThemeDir().'/css/homepage.css');
+
+
+
     }
 
     private static $allowed_actions = array (

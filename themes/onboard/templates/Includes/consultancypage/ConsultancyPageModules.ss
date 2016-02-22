@@ -11,7 +11,7 @@
 
             <a href="$Link" class="videos-button"><i class="fa fa-play"></i></i>Videos</a>
 
-            <a href="$GetLinkFromID" class="resources-button"><i class="fa fa-download"></i>Files</a>
+            <a href="$Link(tronsfiles)" class="$LinkingMode(tronsfiles) resources-button"><i class="fa fa-download"></i>Files</a>
 
         </div>
     </div>

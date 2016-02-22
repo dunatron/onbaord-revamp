@@ -31,8 +31,8 @@ class ModuleResource extends DataObject
         return $fields;
     }
 
-    public function LinkFile() {
-        return $this->ResourceModulePage()->LinkFile('showfiles/'.$this->ID);
+    public function Link() {
+        return $this->ResourceModulePage()->Link('showfiles/'.$this->ID);
     }
 }
 
