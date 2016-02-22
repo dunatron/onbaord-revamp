@@ -10,6 +10,7 @@ class ResourceModulePage extends Page
 {
     private static $db = array(
         'iconClass' => 'Text',
+
     );
 
     private static $has_one = array(
@@ -19,7 +20,8 @@ class ResourceModulePage extends Page
     );
 
     private static $has_many = array(
-        'ModuleVideos' => 'ModuleVideo'
+        'ModuleVideos' => 'ModuleVideo',
+        'ModuleResources' => 'ModuleResource',
     );
 
     private static $can_be_root = false;
@@ -38,6 +40,13 @@ class ResourceModulePage extends Page
             GridFieldConfig_RecordEditor::create()
         ));
 
+        $fields->addFieldToTab('Root.Resources', GridField::create(
+            'Resource',
+            'Resources on this page',
+            $this->ModuleResources(),
+            GridFieldConfig_RecordEditor::create()
+        ));
+
         return $fields;
     }
 }
@@ -48,6 +57,10 @@ class ResourceModulePage_Controller extends Page_Controller
     private static $allowed_actions = array(
         'show'
     );
+
+    public function test2(){
+        die('retrieve file ID here');
+    }
 
     public function init()
     {
@@ -85,6 +98,8 @@ class ResourceModulePage_Controller extends Page_Controller
         );
         // Variable to use in template -> $Video
     }
+
+
 
 
 }

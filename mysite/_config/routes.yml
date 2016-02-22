@@ -1,0 +1,3 @@
+Director:
+  rules:
+    'resource//$Action/$ID/$OtherID' : ResourceModulePage_Controller

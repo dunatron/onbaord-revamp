@@ -20,19 +20,6 @@ class ConsultancyPage extends Page {
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-//        $fields->addFieldToTab('Root.HomeSlides', GridField::create(
-//            'HomeSlides',
-//            'Slides On This Page',
-//            $this->HomeSlides(),
-//            GridFieldConfig_RecordEditor::create()
-//        ));
-//        $fields->addFieldToTab('Root.ComingSoon', GridField::create(
-//            'ComingSoon',
-//            'Modules Coming Soon',
-//            $this->ComingSoon(),
-//            GridFieldConfig_RecordEditor::create()
-//        ));
-
         return $fields;
     }
 
@@ -47,5 +34,8 @@ class ConsultancyPage_Controller extends Page_Controller {
         Requirements::css($this->ThemeDir().'/css/homepage.css');
     }
 
+    private static $allowed_actions = array (
+
+    );
 
 }
