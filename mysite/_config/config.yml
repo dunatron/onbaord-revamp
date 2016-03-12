@@ -8,11 +8,4 @@ After:
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
-  theme: 'onboard'
-
-GDBackend:
-  default_quality: 90
-
-SiteConfig:
-  extensions:
-    - CustomSiteConfig
+  theme: 'simple'

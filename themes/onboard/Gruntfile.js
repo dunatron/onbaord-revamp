@@ -26,24 +26,13 @@ module.exports = function (grunt) {
         uglify: {
             my_task: {
                 files: {
-                    'js/job-details.js': [
-                        "resources/js/base.js"
-                    ],
-                    'js/job-listing.js': [
-                        "resources/js/base.js",
-                        "resources/js/categories-list.js"
-                    ],
                     'js/uglify-full-page.js': [
-                        "resources/js/base.js",
-                        "resources/js/3d-images.js",
-                        "resources/js/onscreen.js",
                         'resources/js/nav-shrink.js',
-                        'resources/js/nicescroll.min.js',
-                        'resources/js/nicescroll.plus.js',
-                        'resources/js/client-logo-scroller.js'
+                        'resources/js/client-logo-scroller.js',
+                        'resources/js/trons-banner.js'
                     ],
                     'js/base-scripts.js': [
-                        "resources/js/base.js"
+                        "resources/js/trons-banner.js"
                     ]
                 }
             }
@@ -55,7 +44,8 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     'js/uglify-full-page.js',
-                    'resources/js/lib/logosDistort.js'
+                    'resources/js/lib/logosDistort.js',
+                    'resources/js/nicescroll.min.js'
                     //'resources/js/lib/modernizr.js'
                 ],
                 dest: 'js/homepage.js'

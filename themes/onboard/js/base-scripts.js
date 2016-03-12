@@ -1,0 +1,1 @@
+function setDimensions(){var a=$(window).height();$(".tronsSlider").css("height",.85*a),$(".carousel-inner").css("height",.85*a),$(".tron-item").css("height",.85*a)}setDimensions(),$(window).resize(function(){setDimensions()});
