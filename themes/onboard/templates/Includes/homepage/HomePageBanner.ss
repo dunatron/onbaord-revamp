@@ -21,7 +21,7 @@
                         <div class="carousel-caption">
                             <h1>$Title</h1>
 
-                            <p>CaptionText</p>
+                            <p>$CaptionText</p>
 
                             <!-- TODO: hyperlink to modules area -->
                             <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse Modules</a></p>
