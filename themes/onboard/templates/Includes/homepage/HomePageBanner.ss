@@ -21,7 +21,7 @@
                         <div class="carousel-caption">
                             <h2>Caption 1</h2>
                             <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-                            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
+                            <a class="btn btn-module-transparent" href="#modules-text" role="button"><i class="fa fa-angle-down"></i></a>
                         </div>
                     </div>
                 <% end_loop %>
