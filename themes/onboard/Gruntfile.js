@@ -29,7 +29,8 @@ module.exports = function (grunt) {
                     'js/uglify-full-page.js': [
                         'resources/js/nav-shrink.js',
                         'resources/js/client-logo-scroller.js',
-                        'resources/js/trons-banner.js'
+                        'resources/js/trons-banner.js',
+                        'resources/js/smooth-scroll.js'
                     ],
                     'js/base-scripts.js': [
                         "resources/js/trons-banner.js"
