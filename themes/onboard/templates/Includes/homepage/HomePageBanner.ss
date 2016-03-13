@@ -19,9 +19,10 @@
                             <div class="fill tron-item" style="background-image:url('$URL');"></div>
                         <% end_with %>
                         <div class="carousel-caption">
-                            <h2>Caption 1</h2>
-                            <a class="btn btn-module-transparent" href="#" role="button">Link</a>
-                            <a class="btn btn-module-transparent" href="#modules-text" role="button"><i class="fa fa-angle-down"></i></a>
+                            <%--<h2>Caption 1</h2>--%>
+                            <%--<a class="btn btn-module-transparent" href="#" role="button">Link</a>--%>
+                            <a id="module-link" class="btn btn-module-transparent" href="#modules-text" role="button"><i class="fa fa-angle-down fa-2x"></i></a>
+                            <%--<p>to modules</p>--%>
                         </div>
                     </div>
                 <% end_loop %>

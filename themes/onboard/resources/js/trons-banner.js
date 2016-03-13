@@ -3,9 +3,9 @@
  */
 function setDimensions(){
     var windowsHeight = $(window).height();
-    $('.tronsSlider').css('height', windowsHeight * 0.85);
-    $('.carousel-inner').css('height', windowsHeight * 0.85);
-    $('.tron-item').css('height', windowsHeight * 0.85);
+    $('.tronsSlider').css('height', windowsHeight -50);
+    $('.carousel-inner').css('height', windowsHeight -50);
+    $('.tron-item').css('height', windowsHeight - 50);
 }
 
 setDimensions();
