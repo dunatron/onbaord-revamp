@@ -12,8 +12,7 @@ class ModulePage extends Page
     );
 
     private static $has_one = array(
-        'HomePage' => 'HomePage',
-        'ConsultancyPage' => 'ConsultancyPage',
+        'HomePage' => 'HomePage'
     );
 
     private static $has_many = array(

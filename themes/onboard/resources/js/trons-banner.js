@@ -14,3 +14,9 @@ setDimensions();
 $(window).resize(function() {
     setDimensions();
 });
+
+// Function to pre load images after everything else has been done
+$(window).load(function() {
+    // + any other carousel related stuff that has to wait for the images to complete loading
+    $('.carousel').carousel()
+})

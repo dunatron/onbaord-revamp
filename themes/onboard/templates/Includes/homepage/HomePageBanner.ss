@@ -1,7 +1,7 @@
 <div class="section-homepage-banner">
     <div id="hero" class="container-fluid">
         <!-- Full Page Image Background Carousel Header -->
-        <header id="myCarousel" class="carousel slide">
+        <header id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
             <!-- Indicators -->
             <%--
         <ol class="carousel-indicators">
@@ -17,6 +17,7 @@
                     <div class="<% if $First%>item active<% else %>item<% end_if %>">
                         <% with $Photo %>
                             <div class="fill tron-item" style="background-image:url('$URL');"></div>
+                            <style>#preload-01 { background: url($URL) no-repeat -9999px -9999px; }</style>
                         <% end_with %>
                         <div class="carousel-caption">
                             <%--<h2>Caption 1</h2>--%>
@@ -25,6 +26,8 @@
                             <%--<p>to modules</p>--%>
                         </div>
                     </div>
+
+
                 <% end_loop %>
             </div>
             <!-- Controls -->
