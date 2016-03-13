@@ -47,6 +47,9 @@ class HomePage_Controller extends Page_Controller
         //Pull in parent properties for controller e.g css & js assets
         parent::init();
         Requirements::css($this->ThemeDir().'/css/homepage.css');
+        Requirements::set_force_js_to_bottom(true);
+        Requirements::javascript($this->ThemeDir() . '/js/jquery.mobile.custom.min.js');
+        Requirements::javascript($this->ThemeDir() . '/js/tron-swipe.js');
     }
 
     // Return all Members(use this on template to loop client logos)

@@ -35,6 +35,9 @@ module.exports = function (grunt) {
                     ],
                     'js/base-scripts.js': [
                         "resources/js/trons-banner.js"
+                    ],
+                    'js/tron-swipe.js': [
+                        "resources/js/tron-custom-swipe.js"
                     ]
                 }
             }
@@ -52,6 +55,7 @@ module.exports = function (grunt) {
                 ],
                 dest: 'js/homepage.js'
             }
+
         },
         less: {
             development: {},
