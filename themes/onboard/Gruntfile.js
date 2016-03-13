@@ -27,10 +27,11 @@ module.exports = function (grunt) {
             my_task: {
                 files: {
                     'js/uglify-full-page.js': [
+                        'resources/js/smooth-scroll.js',
                         'resources/js/nav-shrink.js',
                         'resources/js/client-logo-scroller.js',
-                        'resources/js/trons-banner.js',
-                        'resources/js/smooth-scroll.js'
+                        'resources/js/trons-banner.js'
+
                     ],
                     'js/base-scripts.js': [
                         "resources/js/trons-banner.js"
