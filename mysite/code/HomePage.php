@@ -11,7 +11,6 @@ class HomePage extends Page
         'ModulePages' => 'ModulePage',
         'HomeSlides' => 'HomeSlides',
         'ComingSoon' => 'ComingSoon'
-
     );
 
     private static $allowed_children = array(
