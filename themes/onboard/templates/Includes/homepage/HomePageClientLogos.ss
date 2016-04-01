@@ -9,11 +9,13 @@
         <div class="container" id="main-content">
             <div class="row">
                 <% loop $pullMembers %>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                        <% with $Logo.ScaleMaxWidth(250) %>
-                            <img class="img-responsive" src="$URL" width="$Width" height="$Height">
-                        <% end_with %>
-                    </div>
+                    <% if $LogoVisible %>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <% with $Logo.ScaleMaxWidth(250) %>
+                                <img class="img-responsive" src="$URL" width="$Width" height="$Height">
+                            <% end_with %>
+                        </div>
+                    <% end_if %>
                 <% end_loop %>
             </div>
         </div>
