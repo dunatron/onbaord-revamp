@@ -41,10 +41,21 @@
 
             <ul class="nav navbar-nav pull-right">
                 <% loop $Menu(1) %>
-                    <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
-
+                    <% if $ClassName != "ConsultancyPage" %>
+                        <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                    <% end_if %>
                 <% end_loop %>
-                <li><a  href="#">Services</a> </li>
+                <li class="dropdown" >
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</i>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <% loop $Menu(1) %>
+                            <% if $ClassName == "ConsultancyPage" %>
+                                <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                            <% end_if %>
+                        <% end_loop %>
+                    </ul>
+                </li>
 
             </ul>
 
