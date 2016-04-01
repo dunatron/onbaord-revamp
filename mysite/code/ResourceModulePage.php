@@ -80,6 +80,7 @@ class ResourceModulePage_Controller extends Page_Controller
 
     }
 
+
     public function Link($action = null){
             return $this->LinkOrSection();
     }
