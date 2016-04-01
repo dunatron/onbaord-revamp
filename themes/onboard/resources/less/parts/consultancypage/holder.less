@@ -11,14 +11,28 @@
   }
 
   .list-wrapper {
-    margin: 10px 0 40px 0;
+
+    .row {
+      margin: 0 0 40px 0;
+
+      .video-title-wrapper {
+        text-align: left;
+      }
+      .video-description-wrapper {
+        text-align: center;
+      }
+      .video-play-wrapper {
+        text-align: left;
+      }
+    }
+
   }
 
   a {
     color: @color-grey;
     font-size: 18px;
     text-decoration: none;
-    margin: 10px 0 10px 0;
+//    margin: 10px 0 10px 0;
     display: inline-block;
     text-align: left;
 
@@ -32,8 +46,9 @@
   }
 
   #list-desc {
-    font-size: 18px;
+    font-size: 22px;
     color: @color-grey;
+    margin-bottom: 40px;
   }
 
   .description {
