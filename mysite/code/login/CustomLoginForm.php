@@ -3,49 +3,6 @@
 class CustomLoginForm extends MemberLoginForm
 {
 
-    // this function is overloaded on our subclass (this) to do something different
-//    public function dologin($data) {
-//        if($this->performLogin($data)) {
-//            if(!$this->redirectByGroup($data))
-//                $this->controller->redirect(Director::absoluteBaseURL());
-//        } else {
-//            if($badLoginURL = Session::get("BadLoginURL")) {
-//                $this->controller->redirect($badLoginURL);
-//            } else {
-//                $this->controller->redirectBack();
-//            }
-//        }
-//    }
-//
-//    public function redirectByGroup($data) {
-//        // gets the current member that is logging in.
-//        $member = Member::currentUser();
-//
-//        // gets all the groups.
-//        $Groups = DataObject::get("Group");
-//        // cycle through each group
-//        foreach($Groups as $Group){
-//            // if the member is in the group and that group has GoToAdmin checked
-//            if($member->inGroup($Group->ID) && $Group->GoToAdmin == 1)
-//            {
-//                // redirect to the admin page
-//                $this->controller->redirect(Director::absoluteBaseURL() . 'admin');
-//                return true;
-//
-//            }
-//            // otherwise if the member is in the group and that group has a page link defined
-//            elseif($member->inGropup($Group->ID) && $Group->LinkPageID != 0)
-//            {
-//                // Get the page that is referenced in the group
-//                $Link = DataObject::get_by_id("SiteTree", "{$Group->LinkPageID}")->URLSegment;
-//                //direct to that page
-//                $this->controller->redirect(Director::absoluteBaseURL() . $Link);
-//                return true;
-//            }
-//        }
-//        // otherwise if none of the above worked return false
-//        return false;
-//    }
 
     public function dologin($data) {
         if($this->performLogin($data)) {
@@ -68,21 +25,6 @@ class CustomLoginForm extends MemberLoginForm
         }
     }
 
-    /**
-     * Login in the user and figure out where to redirect the browser.
-     *
-     * The $data has this format
-     * array(
-     *   'AuthenticationMethod' => 'MemberAuthenticator',
-     *   'Email' => 'sam@silverstripe.com',
-     *   'Password' => '1nitialPassword',
-     *   'BackURL' => 'test/link',
-     *   [Optional: 'Remember' => 1 ]
-     * )
-     *
-     * @param array $data
-     * @return SS_HTTPResponse
-     */
     protected function logInUserAndRedirect($data) {
         Session::clear('SessionForms.MemberLoginForm.Email');
         Session::clear('SessionForms.MemberLoginForm.Remember');
@@ -133,7 +75,9 @@ class CustomLoginForm extends MemberLoginForm
             );
             Session::set("Security.Message.type", "good");
         }
-        $url = "/resources/";
+        // Do checks of pagetypes to see where we were and where to go then for the rest redirect to baseurl
+//        $url = "/resources/";
+        $url = "/about-us/";
         $url = Controller::join_links(Director::absoluteBaseURL(), $url);
         return $this->controller->redirect($url);
     }
