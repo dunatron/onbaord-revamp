@@ -16,8 +16,7 @@ class ModulePage extends Page
     );
 
     private static $has_many = array(
-        'ModuleVideos' => 'ModuleVideo',
-        'ModuleScreenshots' => 'ModuleScreenshot'
+       'ModuleScreenshots' => 'ModuleScreenshot'
     );
 
     private static $can_be_root = false;
@@ -27,17 +26,8 @@ class ModulePage extends Page
         $fields = parent::getCMSFields();
 
         $fields->addFieldToTab('Root.Main', TextField::create('iconClass', 'glyphicon class e.g glyphicon-home'), 'Content');
-
-        //MAIN ASSETS ADDED TO CMS
-        $fields->addFieldToTab('Root.Videos', GridField::create(
-            'Video',
-            'Videos on this page',
-            $this->ModuleVideos(),
-            GridFieldConfig_RecordEditor::create()
-        ));
-
-        //Add Screenshot tutorials create tab to module page
-        //MAIN ASSETS ADDED TO CMS
+//        //Add Screenshot tutorials create tab to module page
+//        //MAIN ASSETS ADDED TO CMS
         $fields->addFieldToTab('Root.Screenshots', GridField::create(
             'Screenshots',
             'Screenshots for this Module',
