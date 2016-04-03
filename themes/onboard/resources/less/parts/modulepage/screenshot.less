@@ -66,8 +66,9 @@
   #build-pc-content-odd {
     position: relative;
     left: -3px;
-    width: 400px;
-    height: 246px;
+    max-width: 100%;
+    height: 100%;
+    float: right;
 
     .left-mobile-screenshot();
 
@@ -78,8 +79,10 @@
     }
 
     @media (min-width: 1200px){
-      width: 400px;
-      height: 246px;
+//      width: 400px;
+//      height: 246px;
+      max-width: 100%;
+      height: 100%;
 
     }
   }
@@ -95,7 +98,13 @@
   }
 
   p {
+    display: inline-block;
 
+  }
+
+  .row {
+    padding: 0;
+    margin: 0;
   }
 
 }
@@ -108,6 +117,10 @@
 .build-pc-odd{
   float: left;
 
+  img {
+    float: right;
+  }
+
 }
 
 .build-text-even{
@@ -116,7 +129,11 @@
 }
 
 .build-text-odd{
-  float: right;
+  float: left;
+  color: white;
+  p {
+    color: #ffffff !important;
+  }
   .left-mobile-screenshot();
 }
 
