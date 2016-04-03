@@ -2,42 +2,43 @@
 /**
  * Created by PhpStorm.
  * User: Heath
- * Date: 3/04/16
- * Time: 6:58 PM
+ * Date: 21/02/16
+ * Time: 2:42 PM
  */
-class ConsultancyPage extends Page
-{
 
-    private static $db = array(
-        'Title' => 'Text',
-    );
+class ResourcePage extends Page {
 
     private static $has_many = array(
-        'ConsultModulePages' => 'ConsultModulePage',
+        'ResourceModulePages' => 'ResourceModulePage',
     );
 
     private static $allowed_children = array(
-        'ConsultModulePage'
+        'ResourceModulePage',
     );
 
     //Getting CMS Fields For our Home slides DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', TextField::create('Title', 'Title for Consultancy Page'), 'Content');
-
         return $fields;
     }
 
 }
 
-class ConsultancyPage_Controller extends Page_Controller
-{
+class ResourcePage_Controller extends Page_Controller {
+
     public function init()
     {
         //Pull in parent properties for controller e.g css & js assets
         parent::init();
         Requirements::css($this->ThemeDir().'/css/homepage.css');
+
+
+
     }
+
+    private static $allowed_actions = array (
+
+    );
 
 }

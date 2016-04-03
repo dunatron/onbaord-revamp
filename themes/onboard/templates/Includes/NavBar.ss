@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-fixed-top onboard-nav">
     <div class="container">
         <div class="navbar-header">
@@ -49,7 +48,10 @@
                         <% if $ClassName != "AboutUsPage" || $ClassName != "AboutUsPage" %>
                             <% if $ClassName != "TestimonialsPage" || $ClassName != "TestimonialsPage" %>
                                 <% if $ClassName != "ClientPage" || $ClassName != "ClientPage" %>
-                            <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                                    <% if $ClassName != "ResourcePage" || $ClassName != "ResourcePage" %>
+                                        <li><a class="$LinkingMode" href="$Link"
+                                               title="$Go to the $Title page">$MenuTitle</a></li>
+                                    <% end_if %>
                                 <% end_if %>
                             <% end_if %>
                         <% end_if %>
@@ -76,7 +78,7 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <% loop $Menu(1) %>
-                            <% if $ClassName == "ConsultancyPage" %>
+                            <% if $ClassName == "ConsultancyPage" || $ClassName == "ResourcePage" %>
                                 <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a>
                                 </li>
                             <% end_if %>

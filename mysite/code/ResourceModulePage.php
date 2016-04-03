@@ -14,7 +14,7 @@ class ResourceModulePage extends Page
     );
 
     private static $has_one = array(
-        'ConsultancyPage' => 'ConsultancyPage',
+        'ResourcePage' => 'ResourcePage',
     );
 
     private static $has_many = array(
