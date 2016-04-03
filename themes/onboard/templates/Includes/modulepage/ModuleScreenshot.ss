@@ -7,7 +7,7 @@
                 <div class="build-pc col-lg-9 build-pc-$EvenOdd">
 
                     <%-- Screen shot Image to be added in below --%>
-                    <% with $ScreenShot.croppedImage(960, 560) %>
+                    <% with $ScreenShot.croppedImage(800, 492) %>
                         <img id="build-pc-content" src="$URL" width="$Width" height="$Height">
                     <% end_with %>
 
