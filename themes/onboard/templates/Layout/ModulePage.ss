@@ -23,13 +23,13 @@
     </div>
 
     <div class="container-fluid">
-        <% if CurrentMember %>
+        <%--<% if CurrentMember %>--%>
             <%--<% include ModuleVideo %>--%>
             <% include ModuleScreenshot %>
 
-        <% else %>
-            <% include ModuleLogin %>
-        <% end_if %>
+        <%--<% else %>--%>
+            <%--<% include ModuleLogin %>--%>
+        <%--<% end_if %>--%>
     </div>
 
 </div>
