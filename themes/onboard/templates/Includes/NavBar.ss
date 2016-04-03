@@ -48,7 +48,9 @@
                     <% if $ClassName != "ConsultancyPage" || $ClassName != "ConsultancyPage" %>
                         <% if $ClassName != "AboutUsPage" || $ClassName != "AboutUsPage" %>
                             <% if $ClassName != "TestimonialsPage" || $ClassName != "TestimonialsPage" %>
+                                <% if $ClassName != "ClientPage" || $ClassName != "ClientPage" %>
                             <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                                <% end_if %>
                             <% end_if %>
                         <% end_if %>
                     <% end_if %>
@@ -60,7 +62,7 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <% loop $Menu(1) %>
-                            <% if $ClassName == "AboutUsPage" || $ClassName == "TestimonialsPage" %>
+                            <% if $ClassName == "AboutUsPage" || $ClassName == "TestimonialsPage" || $ClassName == "ClientPage" %>
                                 <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a>
                                 </li>
                             <% end_if %>
