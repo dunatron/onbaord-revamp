@@ -3,10 +3,9 @@
         <div class="container">
             <div class="row text-center" id="modules-text">
 
-                <h2>In Development</h2>
+                <h2>$ComingSoonTitle</h2>
 
-                <p id="sub-header">The team at onBoard can support you boarding school through confidential consultancy
-                    work. The onBoard team specialise in</p>
+                <p id="sub-header">$ComingSoonContent</p>
 
             </div>
         </div>
