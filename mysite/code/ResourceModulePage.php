@@ -56,45 +56,36 @@ class ResourceModulePage_Controller extends Page_Controller
         'show',
         'showfiles',
         'tronsvids',
-        'tronsfiles'
+        'tronsfiles',
+        'test'
     );
+
+    public function test() {
+//       die('it works');
+        echo '<pre>';
+        var_dump($_REQUEST['url']);
+        echo $_REQUEST['url'];
+//
+//        die;
+        return $this->renderWith('ResourceModulePageFilesList', 'Page');
+    }
 
     public function tronsvids(SS_HTTPRequest $request){
         print_r($request->allParams());
     }
 
-    public function tronsfiles(SS_HTTPRequest $request){
-
-//        echo '<pre>';
-//        var_dump($request);
-//        echo '</pre>';
-//        die('die');
-
-//        return $this->ResourceModulePage()->Link('show/'.$this->ID)
-//            ->renderWith('ResourceModulePageFilesList');
-
-        return $this->renderWith('ResourceModulePageFilesList');
-
-
-
-
-    }
+//    public function tronsfiles(SS_HTTPRequest $request){
+//        $page =
+//        return $this->renderWith('ResourceModulePageFilesList');
+//    }
 
 
     public function Link($action = null){
-            return $this->LinkOrSection();
+//        var_dump($this);
+//        die;
+        return $this->renderWith('ResourceModulePageFilesList', 'Page');
     }
 
-//    public function LinkingMode($action = null) {
-//        $controllerAction = $this->getAction();
-//        if (is_null($controllerAction) && is_null($action))
-//            return MyChildClass::LinkingMode();
-//
-//        if ($action == $controllerAction)
-//            return 'current';
-//        else
-//            return $this->LinkOrSection();
-//    }
 
 
     public function init()
@@ -104,21 +95,6 @@ class ResourceModulePage_Controller extends Page_Controller
         Requirements::css($this->ThemeDir().'/css/module-page.css');
     }
 
-    /**
-     * @return string
-     */
-    public function getScriptName()
-    {
-        //return 'job-details.js';
-    }
-
-    /**
-     * @return string
-     */
-    public function getStyleName()
-    {
-        return 'module-page.css';
-    }
 
     // Show Video when video ID is pressed
     public function show(SS_HTTPRequest $request) {

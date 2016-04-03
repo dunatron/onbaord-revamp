@@ -77,6 +77,7 @@ class CustomLoginForm extends MemberLoginForm
         }
         // Do checks of pagetypes to see where we were and where to go then for the rest redirect to baseurl
 //        $url = "/resources/";
+
         $url = "/about-us/";
         $url = Controller::join_links(Director::absoluteBaseURL(), $url);
         return $this->controller->redirect($url);

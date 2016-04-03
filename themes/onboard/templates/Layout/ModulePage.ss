@@ -28,7 +28,7 @@
             <% include ModuleScreenshot %>
 
         <% else %>
-            <% include PleaseLogin %>
+            <% include ModuleLogin %>
         <% end_if %>
     </div>
 
