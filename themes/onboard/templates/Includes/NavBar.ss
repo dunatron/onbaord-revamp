@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-fixed-top onboard-nav">
     <div class="container">
         <div class="navbar-header">
@@ -15,14 +16,17 @@
             <ul class="nav navbar-nav pull-left">
 
                 <li id="social-item-holder">
-                    <a href="$SiteConfig.TwitterLink" target="_blank" id="social-item-link"><i class="fa fa-linkedin"></i></a>
+                    <a href="$SiteConfig.TwitterLink" target="_blank" id="social-item-link"><i
+                            class="fa fa-linkedin"></i></a>
                 </li>
                 <li id="social-item-holder">
-                    <a href="$SiteConfig.FacebookLink" target="_blank" id="social-item-link"><i class="fa fa-facebook"></i></a>
+                    <a href="$SiteConfig.FacebookLink" target="_blank" id="social-item-link"><i
+                            class="fa fa-facebook"></i></a>
                 </li>
 
-                <li class="dropdown" >
-                    <a href="#"  id="social-item-link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>
+                <li class="dropdown">
+                    <a href="#" id="social-item-link" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
 
@@ -41,17 +45,38 @@
 
             <ul class="nav navbar-nav pull-right">
                 <% loop $Menu(1) %>
-                    <% if $ClassName != "ConsultancyPage" %>
-                        <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                    <% if $ClassName != "ConsultancyPage" || $ClassName != "ConsultancyPage" %>
+                        <% if $ClassName != "AboutUsPage" || $ClassName != "AboutUsPage" %>
+                            <% if $ClassName != "TestimonialsPage" || $ClassName != "TestimonialsPage" %>
+                            <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                            <% end_if %>
+                        <% end_if %>
                     <% end_if %>
                 <% end_loop %>
-                <li class="dropdown" >
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</i>
+                <%-- Our Company Drop Down --%>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Our Company</i>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <% loop $Menu(1) %>
+                            <% if $ClassName == "AboutUsPage" || $ClassName == "TestimonialsPage" %>
+                                <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a>
+                                </li>
+                            <% end_if %>
+                        <% end_loop %>
+                    </ul>
+                </li>
+                <%-- Services Drop Down --%>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Services</i>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <% loop $Menu(1) %>
                             <% if $ClassName == "ConsultancyPage" %>
-                                <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                                <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a>
+                                </li>
                             <% end_if %>
                         <% end_loop %>
                     </ul>
@@ -59,6 +84,7 @@
 
             </ul>
 
-        </div><!--/.nav-collapse -->
+        </div>
+        <!--/.nav-collapse -->
     </div>
 </nav>
