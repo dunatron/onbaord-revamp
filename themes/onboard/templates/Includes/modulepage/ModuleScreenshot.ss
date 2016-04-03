@@ -4,7 +4,7 @@
 
         <div class="container-fluid container-$EvenOdd">
             <div class="container-fluid">
-                <div class="build-pc col-lg-9 build-pc-$EvenOdd">
+                <div class="build-pc col-lg-6 build-pc-$EvenOdd">
 
                     <%-- Screen shot Image to be added in below --%>
                     <% with $ScreenShot %>
@@ -13,7 +13,7 @@
 
                 </div>
 
-                <div class="build-text col-lg-3 build-text-$EvenOdd">
+                <div class="build-text col-lg-6 build-text-$EvenOdd">
                     <div class="row">
                         <h2>$Title</h2>
                     </div>
