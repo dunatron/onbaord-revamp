@@ -2,7 +2,7 @@
 <% include buffer %>
 <% include Message %>
 
-<div class="$ClassName.LowerCase container">
+<div class="$ClassName.LowerCase-wrapper container">
     <h1>$Title</h1>
     $Content
 
