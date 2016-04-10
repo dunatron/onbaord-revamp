@@ -9,6 +9,7 @@ class StaffMember extends DataObject {
 
     private static $db = array(
         'Name' => 'Text',
+        'Position' => 'Text',
         'Content' => 'HTMLText'
     );
 
@@ -21,6 +22,7 @@ class StaffMember extends DataObject {
     {
         $fields = FieldList::create(
             TextField::create('Name'),
+            TextField::create('Position'),
             $screenShot = UploadField::create('StaffPhoto'),
             HtmlEditorField::create('Content')
         );

@@ -3,7 +3,7 @@
 <% include Message %>
 
 <div class="container">
-    <h1>$Title</h1>
+    <h1 id="$ClassName.lowercase-title">$Title.UpperCase</h1>
     $Content
 
     <div class="clients-wrapper">

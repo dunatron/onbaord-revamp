@@ -16,7 +16,7 @@
                         <% end_with %>
                     </div>
                     <div class="staff-desc col-lg-9 col-md-9">
-                        <h2>$Name</h2>
+                        <h2>$Name - $Position</h2>
                         <i class="fa fa-quote-left pull-left"></i>
                         <div class="desc-content">
                             $Content
