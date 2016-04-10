@@ -29,7 +29,9 @@ class MemberDecorator extends DataExtension {
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldToTab("Root.Profile", new TextField('ClientName', 'Client Name(company)'));
-        $fields->addFieldToTab("Root.Profile", new TextField('Website', 'Website', 'http://'));
+        // Below code pre fills the field
+        //$fields->addFieldToTab("Root.Profile", new TextField('Website', 'Website', 'http://'));
+        $fields->addFieldToTab("Root.Profile", new TextField('Website', 'Website'));
         $fields->addFieldToTab("Root.Profile", new CheckboxField("LogoVisible"));
 
         $fields->addFieldToTab('Root.Profile', $logo = UploadField::create('Logo'));
