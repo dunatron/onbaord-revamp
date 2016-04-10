@@ -19,7 +19,8 @@ class MemberDecorator extends DataExtension {
         return array(
             'db' => array(
                 "LogoVisible" => 'Boolean',
-                "Website" => "Varchar(100)"
+                "Website" => "Varchar(100)",
+                "ClientName" => "Varchar(100)"
             )
         );
     }
@@ -27,9 +28,8 @@ class MemberDecorator extends DataExtension {
     // Add form fields to CMS
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab("Root.Profile", new TextField('JobTitle', 'Job Title'));
+        $fields->addFieldToTab("Root.Profile", new TextField('ClientName', 'Client Name(company)'));
         $fields->addFieldToTab("Root.Profile", new TextField('Website', 'Website', 'http://'));
-        $fields->addFieldToTab("Root.Profile", new TextareaField('Blurb', 'Blurb'));
         $fields->addFieldToTab("Root.Profile", new CheckboxField("LogoVisible"));
 
         $fields->addFieldToTab('Root.Profile', $logo = UploadField::create('Logo'));
