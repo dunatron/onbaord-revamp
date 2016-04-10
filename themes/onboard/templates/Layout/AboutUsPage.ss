@@ -2,7 +2,7 @@
 <% include Message %>
 
 <div class="container">
-    <h1 id="company-title">$Title</h1>
+    <h1 id="company-title">$Title.UpperCase</h1>
     $Content
 
     <div class="staff-wrapper">
