@@ -8,7 +8,6 @@
 class Testimonial extends DataObject {
 
     private static $db = array(
-        'Title' => 'Text',
         'Name' => 'Text',
         'Content' => 'HTMLText'
     );
@@ -21,7 +20,6 @@ class Testimonial extends DataObject {
     public function updateCMSFields()
     {
         $fields = FieldList::create(
-            TextField::create('Title'),
             TextField::create('Name'),
             $screenShot = UploadField::create('TestimonialPhoto'),
             HtmlEditorField::create('Content')
