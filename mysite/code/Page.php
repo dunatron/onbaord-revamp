@@ -43,6 +43,13 @@ class Page_Controller extends ContentController
         'TronsContactForm'
     );
 
+    // Return all Members(use this on template to loop client logos)
+    function pullMembers()
+    {
+        $members = DataObject::get('Member');
+        return $members;
+    }
+
     // Set session Message
 
     // Set SessionMessages
@@ -85,35 +92,6 @@ class Page_Controller extends ContentController
         $this->addMessage($message, $type, $canclose);
     }
 
-
-    // Hello Form
-
-//    public function HelloForm()
-//    {
-//        $fields = new FieldList(
-//            TextField::create('Name', 'Your Name'),
-//            EmailField::create('Email')
-//        );
-//
-//        $actions = new FieldList(
-//            FormAction::create("doSayHello")->setTitle("Say hello")
-//        );
-//
-//        $required = new RequiredFields('Name');
-//
-//        $form = new Form($this, 'HelloForm', $fields, $actions, $required);
-//
-//        return $form;
-//    }
-//
-//    public function doSayHello($data, Form $form)
-//    {
-//        $form->sessionMessage('Hello ' . $data['Name'], 'success');
-//        //$this->setMessage('Errorrrrr', 'Error: yo fool, foo is not a bar');
-//        $this->setMessage('Thanks ' . $data['Name'] . ' onBoard will be in contact asap', 'success');
-//        return $this->redirectBack();
-//    }
-
     public function TronsContactForm()
     {
         $fields = new FieldList(
@@ -155,7 +133,6 @@ class Page_Controller extends ContentController
 
 
     }
-
 
 
 }
