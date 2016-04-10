@@ -8,7 +8,6 @@
 class StaffMember extends DataObject {
 
     private static $db = array(
-        'Title' => 'Text',
         'Name' => 'Text',
         'Content' => 'HTMLText'
     );
@@ -21,7 +20,6 @@ class StaffMember extends DataObject {
     public function updateCMSFields()
     {
         $fields = FieldList::create(
-            TextField::create('Title'),
             TextField::create('Name'),
             $screenShot = UploadField::create('StaffPhoto'),
             HtmlEditorField::create('Content')

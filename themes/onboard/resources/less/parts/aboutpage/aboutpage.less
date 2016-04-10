@@ -1,24 +1,65 @@
 .aboutuspage {
 
-  p{
+  p {
     font-size: 18px;
   }
 
   // Staff Wrapper
   .staff-wrapper {
 
-    // Staff Member Object
-    .staff-member {
+    .row {
+      margin: 80px 0 80px 0;
+      // Staff Member Object
+      .staff-member {
 
-      .staff-photo {
+        .staff-photo {
 
-        img {
+          img {
+            margin-left:auto;
+            margin-right: auto;
+            
+            @media @min976 {
+            margin-left:auto;
+            margin-right: auto;
+          }
+
+            border: 1px solid darken(@color-green, 20%);
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+            padding: 5px;
+
+          }
 
         }
 
-      }
+        .staff-desc {
 
-      .staff-desc {
+          h2 {
+            font-family: 'GustanMedium';
+            color: rgb(51, 51, 51);
+            font-size: 22px;
+            text-align: center;
+            @media @min976 {
+              text-align: left;
+            }
+
+          }
+
+          .desc-content {
+            margin: 20px 10px 0px 30px;
+            p {
+              font-size: 14px;
+              text-align: center;
+            }
+          }
+
+          .fa {
+            font-size: 10px;
+            color: darken(@color-green, 20%);
+          }
+
+        }
 
       }
 
