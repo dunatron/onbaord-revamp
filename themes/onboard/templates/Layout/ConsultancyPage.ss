@@ -8,6 +8,7 @@
         <div class="row text-center" id="modules-text">
 
             <h2>$Title</h2>
+            $Content
 
         </div>
     </div>
