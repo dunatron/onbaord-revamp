@@ -45,12 +45,13 @@
 
             <div class="onboard-module text-center">
 
-                <span class="glyphicon module-icon $iconClass"></span>
+                <a href="$Link" ><span class="glyphicon module-icon $iconClass"></span></a>
 
                 <h2>$Title</h2>
 
                 <div class="collapse" id="module-$ID">
                     <p>$Content.LimitCharacters(300)</p>
+                    <a href="$Link" class="read-more">[READ MORE]</a>
                 </div>
 
 
