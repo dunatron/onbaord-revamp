@@ -1,9 +1,12 @@
 <% if $ComingSoon %>
     <div class="container-fluid coming-soon-modules">
+
+        <h2 id="Main-Title">$ComingSoonTitle</h2>
+
         <div class="container">
             <div class="row text-center" id="modules-text">
 
-                <h2>$ComingSoonTitle</h2>
+
 
                 <p id="sub-header">$ComingSoonContent</p>
 
