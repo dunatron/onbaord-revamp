@@ -10,8 +10,8 @@
             <div class="row">
                 <% loop $pullMembers %>
                     <% if $LogoVisible %>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-                            <% with $Logo.ScaleMaxHeight(150) %>
+                        <div class="client-logos">
+                            <% with $Logo.ScaleMaxHeight(120) %>
                                 <img class="img-responsive" src="$URL" width="$Width" height="$Height">
                             <% end_with %>
                         </div>

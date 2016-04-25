@@ -18,17 +18,19 @@
          col-lg-offset-1<% else_if $Pos == 16 %> col-lg-offset-1<% else %><% end_if %> col-sm-6">
             <div class="onboard-module text-center">
 
-                <span class="glyphicon module-icon $iconClass" aria-hidden="true"></span>
+                <span class="glyphicon module-icon $iconClass"></span>
 
                 <h2>$Title</h2>
 
-                <p>$Content.LimitCharacters(300)
-                </p>
+                <div class="collapse" id="module-$ID">
+                    <p>$Content.LimitCharacters(300)</p>
+                </div>
 
 
-                <a href="$Link">
-                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-                </a>
+
+
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" aria-hidden="true" data-toggle="collapse" data-target="#module-$ID"></span>
+                <%--<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#module-$ID">Simple collapsible</button>--%>
 
             </div>
         </div>
