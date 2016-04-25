@@ -4,6 +4,10 @@
     max-width: 1800px;
   }
 
+  .row {
+    margin: 0;
+  }
+
   a {
     color: darken(@color-green, 20%);
   }
@@ -57,27 +61,28 @@
 
   /* onBoard Module / Panels Section */
   .onboard-module {
-    width: 20%;
+    width: 100%;
     height: auto !important;
     display: inline-block;
-    @media (min-width: 960px){
+    @media (min-width: 800px){
       height: auto !important;
+      width: 49%;
+    }
+    @media (min-width: 1100px){
+      height: auto !important;
+      width: 19.8%;
     }
 //    background-color: rgba(255, 255, 255, .5);
     margin-bottom: 80px;
 
 
     p {
-      margin: 20px 0 0 0;
+      margin: 20px 10px 0 10px;
       line-height: 18px;
       text-align: left;
 
-      @media @min525  {
-        margin: 20px 50px;
-      }
-
       @media @min768 {
-        margin:20px 0 0 0;
+        margin: 20px 10px 0 10px;
       }
 
     }
