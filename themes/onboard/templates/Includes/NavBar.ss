@@ -77,6 +77,7 @@
                        aria-expanded="false">Services</i>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                    <li><a href="$AbsoluteBaseURL#modules-text" title="Go To Modules">OnBoard Management System</a>
                         <% loop $Menu(1) %>
                             <% if $ClassName == "ConsultancyPage" || $ClassName == "ResourcePage" %>
                                 <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a>

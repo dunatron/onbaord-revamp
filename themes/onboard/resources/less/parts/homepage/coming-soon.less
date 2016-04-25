@@ -27,10 +27,6 @@
     color: darken(@color-green, 20%);
   }
 
-  #sub-header {
-    margin: 15px 0;
-  }
-
   .glyphicon {
     font-size: 40px;
     color: @color-other-grey;
@@ -40,6 +36,10 @@
   .glyphicon-plus-sign {
     color: darken(@color-green, 20%);
     font-size: 30px;
+    margin-top: 20px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   h2 {
@@ -48,17 +48,12 @@
     font-family: GustanBold;
     font-weight: 200;
     color: @color-other-grey;
-    text-align: center;
-
-
-
   }
-
-
   #modules-text {
-    padding: 30px 0 140px 0;
+    padding: 70px 0 100px 0;
     h2 {
       font-family: GustanExtraBlack;
+      margin: 30px 0;
     }
 
     @media (min-width: 1200px){
@@ -111,17 +106,6 @@
       height: 250px;
     }
 
-    ul {
-      padding: 0 0 0 20px;
-      li {
-        text-align: left;
-        margin: 0 0 10px 0;
-        font-family: 'GustanLight'
-      }
-    }
-
-
-
     .btn-module {
       background-color: @color-primary;
       font-family: GustanMedium;
@@ -164,6 +148,8 @@
   }
 
 }
+
+
 
 
 
