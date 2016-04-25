@@ -10,7 +10,7 @@
 
             <div class="onboard-module text-center">
 
-                <a href="$Link" ><span class="glyphicon module-icon $iconClass"></span></a>
+                <span class="glyphicon module-icon $iconClass"></span>
 
                 <h2>$Title</h2>
 
