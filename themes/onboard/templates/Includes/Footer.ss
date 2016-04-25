@@ -3,17 +3,17 @@
     <div class="footer">
         <div class="container">
 
-            <div class="page-links-wrapper">
-                <ul>
-                    <% loop $Menu(1) %>
-                        <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
-                    <% end_loop %>
-                </ul>
-            </div>
+
 
             <div class="col-md-6 left-footer-content">
-                <h2>Contact Form</h2>
-                <% include ContactForm %>
+                <div class="page-links-wrapper">
+                    <ul>
+                        <% loop $Menu(1) %>
+                            <li><a class="$LinkingMode" href="$Link" title="$Go to the $Title page">$MenuTitle</a></li>
+                        <% end_loop %>
+                    </ul>
+                </div>
+                <%--<% include ContactForm %>--%>
             </div>
 
             <div class="col-md-6 right-footer-content">
