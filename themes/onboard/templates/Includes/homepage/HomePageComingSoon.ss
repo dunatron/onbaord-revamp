@@ -1,4 +1,8 @@
-<h2 id="Main-Title">$ComingSoonTitle</h2>
+<div class="coming-soon-strip">
+    <a class="btn btn-module-transparent" href="#" role="button">$ComingSoonTitle</a>
+</div>
+
+
 <% if $ComingSoon %>
     <div class="container-fluid coming-soon-modules">
 
