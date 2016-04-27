@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row text-center" id="modules-text">
 
-        <h2>$Title</h2>
+        <h2 class="t-main-header text-center">$Title</h2>
 
     </div>
 </div>

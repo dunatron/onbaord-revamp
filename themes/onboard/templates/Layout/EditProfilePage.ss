@@ -1,6 +1,6 @@
 <div class="typography">
          
-        <h2>$Title</h2>
+        <h2 class="t-main-header text-center">$Title</h2>
      
         <% if Success %>
          

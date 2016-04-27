@@ -1,6 +1,6 @@
 <div class="container-fluid holder-wrapper">
     <div class="container">
-        <h2>$Title</h2>
+        <h2 class="t-main-header text-center">$Title</h2>
 
         <div class="onboard-crumbs">
             $Breadcrumbs

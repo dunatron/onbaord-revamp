@@ -4,12 +4,17 @@
 
 <div class="container-fluid onboard-modules">
     <div class="container">
-        <div class="row text-center" id="modules-text">
+        <div class="row" id="modules-text">
 
-            <h2>onBoard Management System</h2>
+            <h2 class="t-main-header text-center">$Title</h2>
+
+            $Content
 
         </div>
+
     </div>
+
+
 
 
 <% if $MultipleOf(3) %>
