@@ -2,6 +2,14 @@
     <a class="btn btn-module-transparent" href="#" role="button">$ComingSoonTitle</a>
 </div>
 
+<div class="container">
+    <div class="row text-center" id="modules-text">
+
+        <h2 class="t-main-header">In Development</h2>
+
+    </div>
+</div>
+
 
 <% if $ComingSoon %>
     <div class="container-fluid coming-soon-modules">
