@@ -129,6 +129,10 @@ class Page_Controller extends ContentController
 
         $messageBody = "
             <p><strong>Name:</strong> {$data['Name']}</p>
+            <p><strong>Email:</strong> {$data['Email']}</p>
+            <p><strong>Phone:</strong> {$data['Phone']}</p>
+            <p><strong>School:</strong> {$data['School']}</p>
+            <p><strong>Module:</strong> {$data['Module']}</p>
             <p><strong>Message:</strong> {$data['Message']}</p>
             ";
 
