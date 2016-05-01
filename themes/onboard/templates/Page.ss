@@ -46,6 +46,8 @@
                 $Form
             <% end_if %>
 
+        <% include ContactModal %>
+
     </div>
 <% include Footer %>
 
