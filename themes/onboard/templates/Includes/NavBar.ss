@@ -84,6 +84,7 @@
                                 </li>
                             <% end_if %>
                         <% end_loop %>
+                        <li><a  href="" role="button"  data-toggle="modal" data-target="#ContactOnBoardModal">Contact Us</a>
                     </ul>
                 </li>
 
