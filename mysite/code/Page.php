@@ -40,7 +40,7 @@ class Page_Controller extends ContentController
     private static $allowed_actions = array(
         'HelloForm',
         'MyForm',
-        'TronsContactForm'
+        'OnBoardContactForm'
     );
 
     // Return all Members(use this on template to loop client logos)
@@ -92,12 +92,20 @@ class Page_Controller extends ContentController
         $this->addMessage($message, $type, $canclose);
     }
 
-    public function TronsContactForm()
+    public function OnBoardContactForm()
     {
         $fields = new FieldList(
             new TextField('Name'),
             new EmailField('Email'),
+            new TextField('Phone'),
+            new TextField('School'),
+            new DropdownField(
+                'Module',
+                'Please choose what module your issue relates to',
+                Page::get("ModulePage")->map("ID", "Title", "Please Select")),
+
             new TextareaField('Message')
+
         );
 
         $actions = new FieldList(
@@ -106,7 +114,7 @@ class Page_Controller extends ContentController
 
         $required = new RequiredFields('Name');
 
-        $form = new Form($this, 'TronsContactForm', $fields, $actions, $required);
+        $form = new Form($this, 'OnBoardContactForm', $fields, $actions, $required);
 
         return $form;
     }
@@ -133,6 +141,8 @@ class Page_Controller extends ContentController
 
 
     }
+
+
 
 
 }
