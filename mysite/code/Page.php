@@ -94,29 +94,71 @@ class Page_Controller extends ContentController
 
     public function OnBoardContactForm()
     {
-        $fields = new FieldList(
-            new TextField('Name'),
-            new EmailField('Email'),
-            new TextField('Phone'),
-            new TextField('School'),
-            new DropdownField(
-                'Module',
-                'Please choose what module your issue relates to',
-                Page::get("ModulePage")->map("ID", "Title", "Please Select")),
+//        $fields = new FieldList(
+//            new TextField('Name','')
+//            ->setAttribute('placeholder','Name*')
+//            ->addExtraClass('form-control'),
+//            new EmailField('Email', 'Email', 'example@mail.com'),
+//            new TextField('Phone', 'PH', '0212439998'),
+//            new TextField('School', 'School', 'Your Schools Name'),
+//            new DropdownField(
+//                'Module',
+//                'Please choose what module your issue relates to',
+//                Page::get("ModulePage")->map("ID", "Title", "Please Select")),
+//
+//            new TextareaField('Message')
+//
+//        );
+//
+//        $actions = new FieldList(
+//            new FormAction('sendEmail', 'Submit')
+//        );
+//
+//        $required = new RequiredFields('Name');
+//
+//        $form = new Form($this, 'OnBoardContactForm', $fields, $actions, $required);
+//
+//        return $form;
 
-            new TextareaField('Message')
+        $form = Form::create(
+            $this,
+            __FUNCTION__,
+            FieldList::create(
+                TextField::create('Name','')
+                    ->setAttribute('placeholder','Name')
+                    ->addExtraClass('onboard-form-element'),
+                EmailField::create('Email','')
+                    ->setAttribute('placeholder','Email')
+                    ->addExtraClass('onboard-form-element'),
+                EmailField::create('Phone','')
+                    ->setAttribute('placeholder','Phone')
+                    ->addExtraClass('onboard-form-element'),
+                EmailField::create('School','')
+                    ->setAttribute('placeholder','Your School')
+                    ->addExtraClass('onboard-form-element'),
+                DropdownField::create('Module',
+                    'Please Choose What Module your issue relates to',
+                    Page::get("ModulePage")->map("ID", "Title", "Please Select"))
+                    ->addExtraClass('onboard-form-element'),
+                TextareaField::create('Message','')
+                    ->setAttribute('placeholder','Your Message')
+                    ->addExtraClass('onboard-form-element')
 
+
+            ),
+            FieldList::create(
+                FormAction::create('sendEmail','Send')
+                    ->setUseButtonTag(true)
+                    ->addExtraClass('btn btn-lg')
+            ),
+            RequiredFields::create('Name','Email','Comment')
         );
 
-        $actions = new FieldList(
-            new FormAction('sendEmail', 'Submit')
-        );
-
-        $required = new RequiredFields('Name');
-
-        $form = new Form($this, 'OnBoardContactForm', $fields, $actions, $required);
+        $form->addExtraClass('form-style');
 
         return $form;
+
+
     }
 
     public function sendEmail($data, Form $form)
