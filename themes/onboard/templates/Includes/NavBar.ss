@@ -85,6 +85,8 @@
                             <% end_if %>
                         <% end_loop %>
                         <li><a  href="" role="button"  data-toggle="modal" data-target="#ContactOnBoardModal">Contact Us</a>
+                        <li><a  href="" role="button"  data-toggle="modal" data-target="#LoginOnBoardModal">Login</a>
+                        <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#LoginOnBoardModal">Open Modal</button></li>
                     </ul>
                 </li>
 

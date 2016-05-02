@@ -47,6 +47,7 @@
             <% end_if %>
 
         <% include ContactModal %>
+        <% include LoginModal %>
 
     </div>
 <% include Footer %>
