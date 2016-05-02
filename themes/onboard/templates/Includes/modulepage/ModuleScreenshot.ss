@@ -51,7 +51,7 @@
                 <% if $First %>
 
                     <div class="item active">
-                        <% with $ScreenShot.croppedImage(1200,850) %>
+                        <% with $ScreenShot.croppedImage(1040,690) %>
                             <img src="$URL" width="$Width" height="$Height">
                         <% end_with %>
                     </div>
@@ -59,7 +59,7 @@
                 <% else %>
 
                     <div class="item">
-                        <% with $ScreenShot.croppedImage(1200,850) %>
+                        <% with $ScreenShot.croppedImage(1040,690) %>
                             <img src="$URL" width="$Width" height="$Height">
                         <% end_with %>
                     </div>
