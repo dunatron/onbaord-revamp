@@ -36,7 +36,7 @@
                                 <li><a href="Security/logout">Log - Out <i class="fa fa-sign-out"></i></a></li>
                             <% end_loop %>
                         <% else %>
-                            <li><a href="Security/login">Log - In<i class="fa fa-sign-in"></i></a></li>
+                        <li><a  href="" role="button"  data-toggle="modal" data-target="#LoginOnBoardModal">Log - In<i class="fa fa-sign-in"></i></a></li>
                         <% end_if %>
                     </ul>
                 </li>
@@ -84,9 +84,7 @@
                                 </li>
                             <% end_if %>
                         <% end_loop %>
-                        <li><a  href="" role="button"  data-toggle="modal" data-target="#ContactOnBoardModal">Contact Us</a>
-                        <li><a  href="" role="button"  data-toggle="modal" data-target="#LoginOnBoardModal">Login</a>
-                        <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#LoginOnBoardModal">Open Modal</button></li>
+                        <li><a  href="" role="button"  data-toggle="modal" data-target="#ContactOnBoardModal">Contact Us</a></li>
                     </ul>
                 </li>
 
