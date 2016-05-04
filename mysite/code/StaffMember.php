@@ -8,7 +8,6 @@
 class StaffMember extends DataObject {
 
     private static $db = array(
-        'Name' => 'Text',
         'FirstName' => 'Text',
         'LastName' => 'Text',
         'Position' => 'Text',
@@ -21,10 +20,24 @@ class StaffMember extends DataObject {
         'AboutUsPage' => 'AboutUsPage'
     );
 
+    private static $summary_fields = array(
+        'GridThumbnail' => 'Staff',
+        'FirstName' => 'First Name',
+        'LastName' => 'Last Name',
+        'EmailAddress' => 'Email'
+    );
+
+    public function getGridThumbnail()
+    {
+        if ($this->StaffPhoto()->exists()) {
+            return $this->StaffPhoto()->SetWidth(100);
+        }
+        return '(no image, take photos clowns)';
+    }
+
     public function updateCMSFields()
     {
         $fields = FieldList::create(
-            TextField::create('Name'),
             TextField::create('FirstName'),
             TextField::create('LastName'),
             TextField::create('Position'),
