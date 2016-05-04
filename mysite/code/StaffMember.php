@@ -9,7 +9,10 @@ class StaffMember extends DataObject {
 
     private static $db = array(
         'Name' => 'Text',
+        'FirstName' => 'Text',
+        'LastName' => 'Text',
         'Position' => 'Text',
+        'EmailAddress' => 'Text',
         'Content' => 'HTMLText'
     );
 
@@ -22,7 +25,10 @@ class StaffMember extends DataObject {
     {
         $fields = FieldList::create(
             TextField::create('Name'),
+            TextField::create('FirstName'),
+            TextField::create('LastName'),
             TextField::create('Position'),
+            TextField::create('EmailAddress'),
             $screenShot = UploadField::create('StaffPhoto'),
             HtmlEditorField::create('Content')
         );

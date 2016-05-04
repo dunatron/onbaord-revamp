@@ -14,14 +14,21 @@
 
             <ul class="nav navbar-nav pull-left">
 
-                <li id="social-item-holder">
-                    <a href="$SiteConfig.TwitterLink" target="_blank" id="social-item-link"><i
-                            class="fa fa-linkedin"></i></a>
-                </li>
-                <li id="social-item-holder">
-                    <a href="$SiteConfig.FacebookLink" target="_blank" id="social-item-link"><i
-                            class="fa fa-facebook"></i></a>
-                </li>
+
+
+                <% with $SiteConfig %>
+                    <% if LinkedInLink %><li id="social-item-holder">
+                        <a href="$SiteConfig.LinkedInLink" target="_blank" id="social-item-link"><i
+                                class="fa fa-linkedin"></i></a>
+                    </li><% end_if %>
+                    <% if FacebookLink %><li id="social-item-holder">
+                        <a href="$SiteConfig.FacebookLink" target="_blank" id="social-item-link"><i
+                                class="fa fa-facebook"></i></a>
+                    </li><% end_if %>
+                <% end_with %>
+
+
+
 
                 <li class="dropdown">
                     <a href="#" id="social-item-link" class="dropdown-toggle" data-toggle="dropdown" role="button"
