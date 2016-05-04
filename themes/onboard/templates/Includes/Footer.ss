@@ -19,8 +19,6 @@
             <div class="col-md-6 right-footer-content">
 
                 <div class="footer-social-icons">
-
-                    <a href="$FacebookLink" target="_blank"><i class="fa fa-facebook"></i></a>
                     <% with $SiteConfig %>
                         <% if  FacebookLink %><a href="$FacebookLink" target="_blank"><i class="fa fa-facebook"></i></a><% end_if %>
                         <% if $TwitterLink %><a href="$TwitterLink" target="_blank"><i class="fa fa-twitter"></i></a><% end_if %>
