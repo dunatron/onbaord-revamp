@@ -1,5 +1,9 @@
 <!-- Begin page content -->
 
+<div class="onboard-strip">
+    <h1>$ClientTextBar</h1>
+</div>
+
 <div class="client-logo-wrapper">
     <%--<div class="container client-logo-header">--%>
         <%--<h2 class="text-center">Our Clients</h2>--%>

@@ -10,7 +10,8 @@ class HomePage extends Page
 
     private static $db = array(
         'ComingSoonTitle' => 'Text',
-        'ComingSoonContent' => 'Text'
+        'ComingSoonContent' => 'Text',
+        'ClientTextBar' => 'Text',
     );
     private static $has_many = array(
         'ModulePages' => 'ModulePage',
@@ -28,6 +29,7 @@ class HomePage extends Page
         $fields = parent::getCMSFields();
         $fields->addFieldToTab('Root.Main', TextField::create('ComingSoonTitle', 'Coming Soon: Title'), 'Content');
         $fields->addFieldToTab('Root.Main', TextField::create('ComingSoonContent', 'Coming Soon: Content'), 'Content');
+        $fields->addFieldToTab('Root.Main', TextField::create('ClientTextBar', 'Client Text Bar: text'), 'Content');
         $fields->addFieldToTab('Root.HomeSlides', GridField::create(
             'HomeSlides',
             'Slides On This Page',
