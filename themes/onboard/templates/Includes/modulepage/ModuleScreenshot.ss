@@ -160,12 +160,10 @@
 
     <!-- Controls -->
     <a class="left carousel-control" href="#slide-on-illuminati" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="icon-prev"></span>
     </a>
     <a class="right carousel-control" href="#slide-on-illuminati" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="icon-next"></span>
     </a>
 </div>
 
