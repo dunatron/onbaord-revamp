@@ -88,12 +88,12 @@
 
 <%-- LOL THIRD TIME --%>
 
-<div id="mycarousel" class="carousel slide" data-ride="carousel">
+<div id="slide-on-illuminati" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
 
     <ol class="carousel-indicators">
         <% loop $ModuleScreenshots %>
-            <li data-target="#mycarousel" data-slide-to="$ID" <% if $First %>class="active"<% else %><% end_if %>></li>
+            <li data-target="#slide-on-illuminati" data-slide-to="$ID" <% if $First %>class="active"<% else %><% end_if %>></li>
         <% end_loop %>
     </ol>
 
@@ -159,11 +159,11 @@
 
 
     <!-- Controls -->
-    <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+    <a class="left carousel-control" href="#slide-on-illuminati" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+    <a class="right carousel-control" href="#slide-on-illuminati" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
