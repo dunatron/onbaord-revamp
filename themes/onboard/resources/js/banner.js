@@ -130,3 +130,8 @@ $(window).scroll(function(event) {
 
 
 });
+
+//myCarousel
+$('#myCarousel').carousel({
+    interval: 6000
+});

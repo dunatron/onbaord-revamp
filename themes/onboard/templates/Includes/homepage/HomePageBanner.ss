@@ -1,7 +1,7 @@
 <div class="section-homepage-banner">
     <div id="hero" class="container-fluid">
         <!-- Full Page Image Background Carousel Header -->
-        <header id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
+        <header id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000" data-pause="false">
             <!-- Indicators -->
             <%--
         <ol class="carousel-indicators">

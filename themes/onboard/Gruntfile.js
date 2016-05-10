@@ -31,7 +31,8 @@ module.exports = function (grunt) {
                         'resources/js/nav-shrink.js',
                         'resources/js/client-logo-scroller.js',
                         'resources/js/trons-banner.js',
-                        'resources/js/staff-form.js'
+                        'resources/js/staff-form.js',
+                        'resources/js/screenshot-slider.js'
 
                     ],
                     'js/base-scripts.js': [
