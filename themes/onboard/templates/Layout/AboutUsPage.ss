@@ -16,7 +16,11 @@
                         <%--<% end_with %>--%>
                     <%--</div>--%>
                     <div class="staff-contact col-lg-3 col-md-3 container">
-                        <a href="" role="button" data-id="$EmailAddress"  data-toggle="modal" data-target="#EmailStaffModal" class="member-contact-btn  center-block">Contact $FirstName</a>
+                        <a href="" role="button" data-id="$EmailAddress"  data-toggle="modal" data-target="#EmailStaffModal" class="member-contact-btn  center-block">
+                            <%--<i class="fa fa-comments" aria-hidden="true"></i>--%>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            $FirstName
+                        </a>
                     </div>
                     <div class="staff-desc col-lg-9 col-md-9">
                         <h2>$FirstName $LastName - $Position</h2>
