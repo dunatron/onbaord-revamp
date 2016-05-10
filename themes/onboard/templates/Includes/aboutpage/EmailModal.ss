@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="EmailStaffModal-$ID" class="modal fade" role="dialog">
+<div id="EmailStaffModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -11,7 +11,7 @@
             <div class="modal-body">
 
 
-                Email $FirstName $LastName $EmailAddress
+                $StaffContactForm
 
 
             </div>

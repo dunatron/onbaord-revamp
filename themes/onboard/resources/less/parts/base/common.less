@@ -43,6 +43,16 @@ body {
 
 }
 
+.login-button-wrapper {
+  a {
+    .onboard-button();
+  }
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .container {
 
 }
@@ -76,7 +86,6 @@ body {
   height: 85px;
 }
 
-//HA why was common.less not put in styles.less? common means(nearly all the time) Nearly cost my 5mins
 .aboutuspage-menu-buffer {
   height: 85px;
 }
@@ -132,8 +141,6 @@ body {
     border-width: 4.166666666666667px;
     border-color: @color-primary;
     border-style: solid;
-    //max-height: 24px;
-    //min-height: 24px;
     background: transparent;
     font-family: GustanExtraBlack;
 
@@ -141,7 +148,6 @@ body {
     color: @color-primary;
     font-size: 15.73px;
     font-weight: 900;
-    //line-height: 58px;
     text-align: left;
     transform: scaleY(1.009);
     &:hover, &:focus {
@@ -178,7 +184,6 @@ body {
     font-family: GustanExtraBlack;
     font-size: 16px;
     font-weight: 900;
-    //line-height: 58px;
     text-align: left;
     transform: scaleY(1.009);
     padding: 0 30px 0 30px;
@@ -217,13 +222,9 @@ a {
 h2 {
   font-family: GustanExtraBlack;
   color: #000;
-  //display: table-cell;
   font-size: 30px;
-  //vertical-align: middle;
   font-weight: 900;
   line-height: 1.3;
-  //position: relative;
-  //width: 618px;
   margin: auto;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -263,10 +264,6 @@ p {
   }
 }
 
-
-//* {
-//  margin: 0;
-//}
 html, body {
   height: 100%;
 }
@@ -280,30 +277,12 @@ html, body {
   min-height: 194px; /* .push must be the same height as .footer */
 }
 
+form {
+
+  fieldset {
+
+  }
+
+}
 
 
-
-// Push footer
-//html,
-//body {
-//  margin: 0;
-//  padding: 0;
-//  height: 100%;
-//}
-//4
-//.wrapper {
-//  min-height: 100%;
-//  position: relative;
-//}
-//
-//.main-container {
-//  padding-bottom: 194px; /* Height of the footer */
-//}
-//
-//.footer {
-//  position: absolute;
-//  bottom: 0;
-//  width: 100%;
-//  //height: 194px; /* Height of the footer */
-//  min-height: 194px;
-//}

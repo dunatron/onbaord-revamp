@@ -23,7 +23,11 @@
             <% end_loop %>
 
         <% else %>
-            <% include ConsultancyLogin %>
+            <h1>Please login to View Module Resources</h1>
+        <div class="login-button-wrapper">
+            <a href="Security/login">Log - In<i class="fa fa-sign-in"></i></a>
+        </div>
+
         <% end_if %>
     </div>
 

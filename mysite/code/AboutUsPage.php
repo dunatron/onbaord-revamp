@@ -36,6 +36,9 @@ class AboutUsPage extends Page
         return $fields;
     }
 
+
+
+
 }
 
 class AboutUsPage_Controller extends Page_Controller
@@ -46,5 +49,79 @@ class AboutUsPage_Controller extends Page_Controller
         parent::init();
         Requirements::css($this->ThemeDir().'/css/homepage.css');
     }
+
+
+
+    public function StaffContactForm()
+    {
+
+        $form = Form::create(
+            $this,
+            __FUNCTION__,
+            FieldList::create(
+                TextField::create('Name','')
+                    ->setAttribute('placeholder','Name')
+                    ->addExtraClass('onboard-form-element'),
+                EmailField::create('Email','')
+                    ->setAttribute('placeholder','Email')
+                    ->addExtraClass('onboard-form-element'),
+                EmailField::create('StaffEmail','')
+                    ->setAttribute('placeholder','Email')
+                    ->addExtraClass('onboard-form-element'),
+                TextField::create('Phone','')
+                    ->setAttribute('placeholder','Phone')
+                    ->addExtraClass('onboard-form-element'),
+                TextField::create('School','')
+                    ->setAttribute('placeholder','Your School')
+                    ->addExtraClass('onboard-form-element'),
+                TextareaField::create('Message','')
+                    ->setAttribute('placeholder','Your Message')
+                    ->addExtraClass('onboard-form-element')
+            ),
+            FieldList::create(
+                FormAction::create('sendEmail','Send')
+                    ->setUseButtonTag(true)
+                    ->addExtraClass('btn btn-lg')
+            ),
+            RequiredFields::create('Name','Email','Comment')
+        );
+
+        $form->addExtraClass('form-style');
+
+        return $form;
+
+
+    }
+
+    public function sendEmail($data, Form $form)
+    {
+        $email = new Email();
+
+        $email->setTo('heath.dunlop.hd@gmail.com');
+        $email->setFrom($data['Email']);
+        $email->setSubject("Contact Message from {$data["Name"]}");
+
+        $messageBody = "
+            <p><strong>Name:</strong> {$data['Name']}</p>
+            <p><strong>Email:</strong> {$data['Email']}</p>
+            <p><strong>Phone:</strong> {$data['Phone']}</p>
+            <p><strong>School:</strong> {$data['School']}</p>
+            <p><strong>Module:</strong> {$data['Module']}</p>
+            <p><strong>Message:</strong> {$data['Message']}</p>
+            ";
+
+        $email->setBody($messageBody);
+        $email->send();
+        return array(
+            'Content' => '<p>Thank you for your feedback.</p>',
+            'Form' => ''
+        );
+
+
+    }
+
+
+
+
 
 }

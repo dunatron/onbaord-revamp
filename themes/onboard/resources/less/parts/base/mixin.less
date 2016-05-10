@@ -43,6 +43,33 @@
   text-transform: none;
 }
 
+.onboard-button() {
+  padding: 10px 60px;
+  border-width: 2.166666666666667px;
+  border-color: @color-other-grey;
+  border-style: solid;
+  background: transparent;
+  font-family: GustanExtraBlack;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-family: @font-primary;
+  color: darken(@color-green, 20%);
+  font-size: 16px;
+  font-weight: 900;
+  max-width: 205px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  transform: scaleY(1.009);
+  &:hover, &:focus {
+
+    border-color: darken(@color-green, 20%);
+    background-color: darken(@color-green, 20%);
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
 .left-mobile-screenshot(){
   @media @max992 {
     float: left;

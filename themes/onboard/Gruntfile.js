@@ -30,7 +30,8 @@ module.exports = function (grunt) {
                         'resources/js/smooth-scroll.js',
                         'resources/js/nav-shrink.js',
                         'resources/js/client-logo-scroller.js',
-                        'resources/js/trons-banner.js'
+                        'resources/js/trons-banner.js',
+                        'resources/js/staff-form.js'
 
                     ],
                     'js/base-scripts.js': [

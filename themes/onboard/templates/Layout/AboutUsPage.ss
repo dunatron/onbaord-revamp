@@ -16,7 +16,7 @@
                         <%--<% end_with %>--%>
                     <%--</div>--%>
                     <div class="staff-contact col-lg-3 col-md-3 container">
-                        <a href="" role="button"  data-toggle="modal" data-target="#EmailStaffModal-$ID" class="member-contact-btn  center-block">Contact $FirstName</a>
+                        <a href="" role="button" data-id="$EmailAddress"  data-toggle="modal" data-target="#EmailStaffModal" class="member-contact-btn  center-block">Contact $FirstName</a>
                     </div>
                     <div class="staff-desc col-lg-9 col-md-9">
                         <h2>$FirstName $LastName - $Position</h2>
@@ -28,9 +28,8 @@
                     </div>
                 </div>
             </div>
-
-            <% include EmailModal %>
         <% end_loop %>
+        <% include EmailModal %>
     </div>
 
 </div>

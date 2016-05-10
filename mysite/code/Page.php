@@ -9,21 +9,7 @@ class Page extends SiteTree
 
 class Page_Controller extends ContentController
 {
-    /**
-     * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-     * permissions or conditions required to allow the user to access it.
-     *
-     * <code>
-     * array (
-     *     'action', // anyone can access this action
-     *     'action' => true, // same as above
-     *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-     *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-     * );
-     * </code>
-     *
-     * @var array
-     */
+
 
     public function init()
     {
@@ -94,31 +80,6 @@ class Page_Controller extends ContentController
 
     public function OnBoardContactForm()
     {
-//        $fields = new FieldList(
-//            new TextField('Name','')
-//            ->setAttribute('placeholder','Name*')
-//            ->addExtraClass('form-control'),
-//            new EmailField('Email', 'Email', 'example@mail.com'),
-//            new TextField('Phone', 'PH', '0212439998'),
-//            new TextField('School', 'School', 'Your Schools Name'),
-//            new DropdownField(
-//                'Module',
-//                'Please choose what module your issue relates to',
-//                Page::get("ModulePage")->map("ID", "Title", "Please Select")),
-//
-//            new TextareaField('Message')
-//
-//        );
-//
-//        $actions = new FieldList(
-//            new FormAction('sendEmail', 'Submit')
-//        );
-//
-//        $required = new RequiredFields('Name');
-//
-//        $form = new Form($this, 'OnBoardContactForm', $fields, $actions, $required);
-//
-//        return $form;
 
         $form = Form::create(
             $this,
@@ -130,16 +91,16 @@ class Page_Controller extends ContentController
                 EmailField::create('Email','')
                     ->setAttribute('placeholder','Email')
                     ->addExtraClass('onboard-form-element'),
-                EmailField::create('Phone','')
+                TextField::create('Phone','')
                     ->setAttribute('placeholder','Phone')
                     ->addExtraClass('onboard-form-element'),
-                EmailField::create('School','')
+                TextField::create('School','')
                     ->setAttribute('placeholder','Your School')
                     ->addExtraClass('onboard-form-element'),
-                DropdownField::create('Module',
-                    'Please Choose What Module your issue relates to',
-                    Page::get("ModulePage")->map("ID", "Title", "Please Select"))
-                    ->addExtraClass('onboard-form-element'),
+//                DropdownField::create('Module',
+//                    'Please Choose What Module your issue relates to',
+//                    Page::get("ModulePage")->map("ID", "Title", "Please Select"))
+//                    ->addExtraClass('onboard-form-element'),
                 TextareaField::create('Message','')
                     ->setAttribute('placeholder','Your Message')
                     ->addExtraClass('onboard-form-element')
