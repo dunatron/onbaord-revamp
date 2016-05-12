@@ -24,7 +24,7 @@
                             $Content
                         </div>
                         <i class="fa fa-quote-right pull-right"></i>
-                        <h2>$Name</h2>
+                        <h2 id="testimonial-signature">$Name</h2>
                     </div>
                 </div>
             </div>
