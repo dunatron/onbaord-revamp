@@ -6,6 +6,7 @@
     <h2 class="t-main-header text-center">$Title</h2>
     $Content
 
+    <% if Testimonials %>
     <div class="testimonials-wrapper">
         <%-- Loop Testimonials --%>
         <% loop $Testimonials %>
@@ -31,4 +32,5 @@
 
         <% end_loop %>
     </div>
+    <% end_if %>
 </div>

@@ -62,12 +62,12 @@ class AboutUsPage_Controller extends Page_Controller
                 TextField::create('Name','')
                     ->setAttribute('placeholder','Name')
                     ->addExtraClass('onboard-form-element'),
-                EmailField::create('Email','')
+                EmailField::create('ClientEmail','')
                     ->setAttribute('placeholder','Email')
                     ->addExtraClass('onboard-form-element'),
                 EmailField::create('StaffEmail','')
                     ->setAttribute('placeholder','Email')
-                    ->addExtraClass('onboard-form-element'),
+                    ->addExtraClass('onboard-form-element hidden'),
                 TextField::create('Phone','')
                     ->setAttribute('placeholder','Phone')
                     ->addExtraClass('onboard-form-element'),
@@ -79,7 +79,7 @@ class AboutUsPage_Controller extends Page_Controller
                     ->addExtraClass('onboard-form-element')
             ),
             FieldList::create(
-                FormAction::create('sendEmail','Send')
+                FormAction::create('sendStaffEmail','Send')
                     ->setUseButtonTag(true)
                     ->addExtraClass('btn btn-lg')
             ),
@@ -93,20 +93,19 @@ class AboutUsPage_Controller extends Page_Controller
 
     }
 
-    public function sendEmail($data, Form $form)
+    public function sendStaffEmail($data, Form $form)
     {
         $email = new Email();
 
-        $email->setTo('heath.dunlop.hd@gmail.com');
-        $email->setFrom($data['Email']);
+        $email->setTo($data['StaffEmail']);
+        $email->setFrom($data['ClientEmail']);
         $email->setSubject("Contact Message from {$data["Name"]}");
 
         $messageBody = "
             <p><strong>Name:</strong> {$data['Name']}</p>
-            <p><strong>Email:</strong> {$data['Email']}</p>
+            <p><strong>Email:</strong> {$data['ClientEmail']}</p>
             <p><strong>Phone:</strong> {$data['Phone']}</p>
             <p><strong>School:</strong> {$data['School']}</p>
-            <p><strong>Module:</strong> {$data['Module']}</p>
             <p><strong>Message:</strong> {$data['Message']}</p>
             ";
 
