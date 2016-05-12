@@ -1,6 +1,4 @@
 <div class="container">
-
-
     <% if CurrentMember %>
         <% loop CurrentMember %>
             <h1>You Are Currently Logged in as</h1>
@@ -12,5 +10,4 @@
         <h1>Please login to View the Tutorials</h1>
         <a href="Security/login">Log - In<i class="fa fa-sign-in"></i></a>
     <% end_if %>
-
 </div>
