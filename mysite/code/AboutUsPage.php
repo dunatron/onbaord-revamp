@@ -79,7 +79,7 @@ class AboutUsPage_Controller extends Page_Controller
                     ->addExtraClass('onboard-form-element')
             ),
             FieldList::create(
-                FormAction::create('sendStaffEmail','Send')
+                FormAction::create('sendEmail','Send')
                     ->setUseButtonTag(true)
                     ->addExtraClass('btn btn-lg')
             ),
@@ -93,7 +93,7 @@ class AboutUsPage_Controller extends Page_Controller
 
     }
 
-    public function sendStaffEmail($data, Form $form)
+    public function sendEmail($data, Form $form)
     {
         $email = new Email();
 
