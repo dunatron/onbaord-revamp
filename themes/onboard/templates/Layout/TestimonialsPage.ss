@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="testimonial-$EvenOdd">
                     <div class="photo-box col-lg-3 col-md-3">
-                        <% with $TestimonialPhoto.croppedImage(150, 150) %>
+                        <% with $TestimonialPhoto %>
                             <img id="testimonial-img" class="img-responsive" src="$URL" width="$Width" height="$Height">
                         <% end_with %>
 
