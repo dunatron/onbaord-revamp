@@ -4,16 +4,27 @@
 
   .marvel-device {
     display: block;
+//    background: none !important;
 
   }
 
   .marvel-device.macbook{
-    width: 80%;
+    width: 70%;
     height: 100%;
   }
 
   .screen {
 
+  }
+
+  .marvel-device.macbook .camera {
+    background-color: @color-green;
+  }
+
+  .marvel-device.macbook:before {
+    background-color: #000;
+//    -webkit-border-radius: 0;
+//    border-radius: 0;
   }
 
 }

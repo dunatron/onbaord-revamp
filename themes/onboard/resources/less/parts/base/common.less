@@ -23,7 +23,8 @@ body {
 
 .onboard-strip {
 
-  background-image: url(../images/bg/low_contrast_linen.png);
+//  background-image: url(../images/bg/low_contrast_linen.png);
+  background-color: #000;
   background-repeat: repeat;
   background-position: left top;
   text-align: center;
@@ -190,6 +191,25 @@ body {
     &:hover, &:focus {
       background-color: @color-green;
       color: #000;
+      -webkit-transition: color 1s, background-color 1s; /* Safari */
+      transition: color 1s, background-color 1s;
+    }
+  }
+
+  &.btn-onboard-inverse {
+    border: 2px solid #000;
+    color: #000;
+    background: transparent;
+    font-weight: 900;
+    text-align: left;
+    transform: scaleY(1.009);
+    margin: 15px 0 !important;
+    font-size: 20px !important;
+    font-family: 'GustanBold',sans-serif !important;
+    padding: 5px 50px !important;
+    &:hover, &:focus {
+      background-color: #000;
+      color: @color-green;
       -webkit-transition: color 1s, background-color 1s; /* Safari */
       transition: color 1s, background-color 1s;
     }

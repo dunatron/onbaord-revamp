@@ -52,3 +52,7 @@
 
 </div>
 
+<div class="container" style="min-height: 100px; text-align: center;">
+    <a href="" role="button" data-toggle="modal" data-target="#ContactOnBoardModal" class="btn btn-onboard-inverse">enquire now</a>
+</div>
+

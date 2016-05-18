@@ -1,7 +1,6 @@
-
+<%--  https://marvelapp.github.io/devices.css/  --%>
 
 <div class="marvel-device macbook">
-    <div class="top-bar"></div>
     <div class="camera"></div>
     <div class="screen">
         <div id="slide-on-illuminati" class="carousel slide" data-ride="carousel">
@@ -41,9 +40,10 @@
     </div>
 
 </div>
-<div>
-    <div class="bottom-bar"></div>
-</div>
+
+<%--  Separator  --%>
+<div style="margin-top:50px;"></div>
+
 
 
 
