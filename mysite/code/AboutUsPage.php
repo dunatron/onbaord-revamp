@@ -50,6 +50,12 @@ class AboutUsPage_Controller extends Page_Controller
         Requirements::css($this->ThemeDir().'/css/homepage.css');
     }
 
+    private static $allowed_actions = array(
+        'StaffContactForm',
+        'sendEmail',
+    );
+
+
 
 
     public function StaffContactForm()
