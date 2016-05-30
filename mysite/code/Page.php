@@ -26,7 +26,8 @@ class Page_Controller extends ContentController
     private static $allowed_actions = array(
         'HelloForm',
         'MyForm',
-        'OnBoardContactForm'
+        'OnBoardContactForm',
+        'sendEmail'
     );
 
     // Return all Members(use this on template to loop client logos)
@@ -126,7 +127,7 @@ class Page_Controller extends ContentController
     {
         $email = new Email();
 
-        $email->setTo('heath.dunlop.hd@gmail.com');
+        $email->setTo('info@onboard.net.nz');
         $email->setFrom($data['Email']);
         $email->setSubject("Contact Message from {$data["Name"]}");
 
