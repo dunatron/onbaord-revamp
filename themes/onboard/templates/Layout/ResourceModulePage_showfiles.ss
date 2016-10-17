@@ -8,10 +8,17 @@
 <br>
 
 
-$title
+$Title $title
 <h1>Hello</h1>
+
+$ModuleFileID
+$ID
 <% with $ModuleFile %>
-    <a href="$ModuleFile.URL" title="Download $ModuleFile.Title">Download ($ModuleFile.Filesize)</a>
+    $ModuleFileID
+    $Title
+    $ID
+    <a href="$URL" title="Download $ModuleFile.Title">Download ($ModuleFile.Filesize)</a>
 <% end_with %>
+
 
 

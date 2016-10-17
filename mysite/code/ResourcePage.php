@@ -38,7 +38,8 @@ class ResourcePage_Controller extends Page_Controller {
     }
 
     private static $allowed_actions = array (
-
+        'TronLink'
     );
+    
 
 }

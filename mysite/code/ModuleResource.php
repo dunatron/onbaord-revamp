@@ -34,5 +34,6 @@ class ModuleResource extends DataObject
     public function Link() {
         return $this->ResourceModulePage()->Link('showfiles/'.$this->ID);
     }
+    
 }
 

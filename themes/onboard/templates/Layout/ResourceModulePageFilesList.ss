@@ -1,16 +1,87 @@
-<div class="container-fluid holder-wrapper">
-    <div class="container">
-        <h2>$Title</h2>
-        <div class="onboard-crumbs">
-            $Breadcrumbs
-        </div>
-        <div class="list-wrapper">
-            <p id="list-desc">List of Files for $Title</p>
-            <% loop $ModuleResources %>
-                <a href="$Link">$Title</a>
-                <div class="description">$Description</div>
-            <% end_loop %>
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <% base_tag %>
+    <title></title>
+    $MetaTags
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ee3e8b">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="$ThemeDir/css/base-styles.css">
+    <link rel="stylesheet" href="$ThemeDir/css/style.css">
+
+</head>
+<body class="$ClassName.LowerCase">
+<!--[if lt IE 10]>
+<div class="chromeframe">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-warning text-center">
+                You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">
+                upgrade your browser</a>
+                to improve your experience.
+            </div>
         </div>
     </div>
 </div>
+<![endif]-->
+<div class="container-fluid" id="site-wrapper">
+    <% include NavBar %>
+    <div class="$ClassName.LowerCase-menu-buffer"></div>
+    <%-- above class is to compensate for the menu overlaying the content --%>
+    <div class="site-content-wrapper">
 
+
+        <%-- THE ACTUAL FILE LAYOUT--%>
+        <%-- THE ACTUAL FILE LAYOUT--%>
+        <div class="container-fluid holder-wrapper">
+            <div class="container">
+                <h2 class="t-main-header text-center">$Title</h2>
+                <div class="onboard-crumbs">
+                    $Breadcrumbs
+                </div>
+                <div class="list-wrapper files">
+                    <p id="list-desc">List of Files for $Title</p>
+                    <div class="onboard-line"></div>
+                    <% loop $ModuleResources %>
+                        <div class="file-wrapper">
+                            <span class="file-title">$Title</span>
+                            <% with $ModuleFile %>
+                                <div class="controls">
+                                    <a href="$Url" title="Download $Title" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="$Url" title="Download $Title" download><i class="fa fa-download"></i></a>
+                                    $Size
+                                    <br />
+                                </div>
+                            <% end_with %>
+                        </div>
+                    <% end_loop %>
+                </div>
+            </div>
+        </div>
+        <%-- THE ACTUAL FILE LAYOUT--%>
+        <%-- THE ACTUAL FILE LAYOUT--%>
+
+        <% if $Form %>
+            <div style="height: 100px;"></div>
+            $Form
+        <% end_if %>
+
+        <% include ContactModal %>
+        <% include LoginModal %>
+
+    </div>
+    <% include Footer %>
+
+</div>
+</body>
+</html>

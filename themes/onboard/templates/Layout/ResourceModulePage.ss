@@ -7,6 +7,7 @@
         </div>
         <div class="list-wrapper">
             <p id="list-desc">List of Videos for $Title</p>
+            <div class="onboard-line"></div>
             <% loop $ModuleVideos %>
                 <div class="row">
                     <div class="col-md-3 video-title-wrapper">

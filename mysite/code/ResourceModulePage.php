@@ -60,24 +60,24 @@ class ResourceModulePage_Controller extends Page_Controller
         'test'
     );
 
-    public function test() {
-//       die('it works');
-        echo '<pre>';
-        var_dump($_REQUEST['url']);
-        echo $_REQUEST['url'];
-//
-//        die;
-        return $this->renderWith('ResourceModulePageFilesList', 'Page');
-    }
+//    public function test() {
+////       die('it works');
+//        echo '<pre>';
+//        var_dump($_REQUEST['url']);
+//        echo $_REQUEST['url'];
+////
+////        die;
+//        return $this->renderWith('ResourceModulePageFilesList', 'Page');
+//    }
 
     public function tronsvids(SS_HTTPRequest $request){
         print_r($request->allParams());
     }
 
-//    public function tronsfiles(SS_HTTPRequest $request){
-//        $page =
-//        return $this->renderWith('ResourceModulePageFilesList');
-//    }
+    public function tronsfiles(SS_HTTPRequest $request){
+        //$page =
+        return $this->renderWith('ResourceModulePageFilesList', 'Page');
+    }
 
 
     public function Link($action = null){
@@ -108,6 +108,11 @@ class ResourceModulePage_Controller extends Page_Controller
             'Video' => $video
         );
         // Variable to use in template -> $Video
+    }
+
+    public function getRelatedFile()
+    {
+        
     }
 
 
